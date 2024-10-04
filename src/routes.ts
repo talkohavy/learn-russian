@@ -10,10 +10,4 @@ export const routes = [
     activeNames: ['/home', '/'],
     Component: HomePage,
   },
-  {
-    to: '/redux',
-    text: 'Redux Example',
-    activeNames: ['/redux'],
-    Component: ReduxExamplePage,
-  },
 ];
