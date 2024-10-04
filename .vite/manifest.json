@@ -1,0 +1,39 @@
+{
+  "_types.uyohP_cB.js": {
+    "file": "static/js/types.uyohP_cB.js",
+    "name": "types"
+  },
+  "index.html": {
+    "file": "main/index-BAElqrkf.js",
+    "name": "index",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "pages/Home/index.tsx",
+      "pages/Test/index.tsx"
+    ],
+    "css": [
+      "static/css/index.CTAl8O6tbimF.css"
+    ]
+  },
+  "pages/Home/index.tsx": {
+    "file": "static/js/index.CzWosomB.js",
+    "name": "index",
+    "src": "pages/Home/index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_types.uyohP_cB.js"
+    ]
+  },
+  "pages/Test/index.tsx": {
+    "file": "static/js/index.CVtIW39M.js",
+    "name": "index",
+    "src": "pages/Test/index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_types.uyohP_cB.js"
+    ]
+  }
+}
