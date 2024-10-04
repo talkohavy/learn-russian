@@ -6,23 +6,13 @@ import { getRandomObjects } from '@src/utils/getRandomObjects';
 import type { Word } from '@src/utils/types';
 
 export default function TestPage() {
+  const [showResults, setShowResults] = useState<boolean>();
+
   const randomWords = useMemo(() => getRandomObjects<Word>(allWords), []);
 
   const [answers, setAnswers] = useState<Array<string>>(() => Array.from(Array(randomWords.length).map(() => '')));
 
-  console.log('answers is:', answers);
-
-  const userInputs: any = {};
-
-  const handleTestClick = () => {
-    const answers = randomWords.map((word) => {
-      const isCorrectAnswer = word.main.meaning === userInputs[word.main.spelling];
-
-      return isCorrectAnswer;
-    });
-
-    console.log('answers is:', answers);
-  };
+  const handleTestClick = () => setShowResults(true);
 
   return (
     <div className='flex size-full flex-col items-center justify-center gap-10 p-6'>
@@ -41,14 +31,14 @@ export default function TestPage() {
                   className='!w-52'
                 />
 
-                <div className='w-12'>{isCorrectAnswer ? 'yes' : 'no'}</div>
+                <div className='w-12'>{showResults && <div>{isCorrectAnswer ? 'yes' : 'no'}</div>}</div>
               </div>
             </div>
           );
         })}
       </div>
 
-      <Button content='Test' onClick={handleTestClick} />
+      <Button content='Check' onClick={handleTestClick} />
     </div>
   );
 }

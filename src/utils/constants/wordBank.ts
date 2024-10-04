@@ -1,4 +1,4 @@
-import { Category, Word } from '../types';
+import { Category, type Word } from '../types';
 
 export const allWords: Array<Word> = [
   {

@@ -1,3 +1,17 @@
+export type Word = {
+  main: WordMeta;
+  male?: WordMeta;
+  female?: WordMeta;
+  plural?: WordMeta;
+  categories: Array<Category>;
+};
+
+type WordMeta = {
+  spelling: string;
+  meaning: Array<string>;
+  soundsLike: string;
+};
+
 export enum Category {
   Animals = 'animals',
   Jobs = 'jobs',
@@ -14,17 +28,3 @@ export enum Category {
   Greetings = 'greetings',
   Other = 'other',
 }
-
-type WordMeta = {
-  spelling: string;
-  meaning: Array<string>;
-  soundsLike: string;
-};
-
-export type Word = {
-  main: WordMeta;
-  male?: WordMeta;
-  female?: WordMeta;
-  plural?: WordMeta;
-  categories: Array<Category>;
-};

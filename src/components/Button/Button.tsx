@@ -1,5 +1,5 @@
+import type { ReactNode } from 'react';
 import clsx from 'clsx';
-import { ReactNode } from 'react';
 
 type ButtonProps = {
   onClick: (e: any) => void;
@@ -17,7 +17,7 @@ export default function Button(props: ButtonProps) {
       onClick={onClick}
       disabled={disabled}
       className={clsx(
-        'border border-black py-1 text-white cursor-pointer px-2 rounded-md bg-blue-500 hover:bg-blue-600 hover:rounded-lg active:bg-blue-700',
+        'cursor-pointer rounded-md border border-black bg-blue-500 px-2 py-1 text-white hover:rounded-lg hover:bg-blue-600 active:bg-blue-700',
         className,
       )}
     >
