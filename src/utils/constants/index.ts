@@ -1,7 +1,6 @@
-const LS_KEY_THEME = 'theme';
-const LS_KEY_SEARCH_PARAMS = 'search-params';
+export * from './localStorageKeys';
 
-const API_URLS = {
+export const API_URLS = {
   users_service: {
     loginWithCredentials: '/login',
     loginWithCookie: '/login-with-cookie',
@@ -10,5 +9,3 @@ const API_URLS = {
     users: '/users',
   },
 };
-
-export { API_URLS, LS_KEY_SEARCH_PARAMS, LS_KEY_THEME };
