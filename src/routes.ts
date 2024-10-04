@@ -1,7 +1,6 @@
 import { lazy } from 'react';
 
 const HomePage = lazy(() => import('./pages/Home'));
-const ReduxExamplePage = lazy(() => import('./pages/ReduxExample'));
 
 export const routes = [
   {
