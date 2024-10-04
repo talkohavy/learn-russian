@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react';
 import Button from '@src/components/Button/Button';
 import Input from '@src/components/Input';
+import VInCircle from '@src/components/svgs/VInCircle/VInCircle';
+import XMark from '@src/components/svgs/XMark';
 import { allWords } from '@src/utils/constants/wordBank';
 import { getRandomObjects } from '@src/utils/getRandomObjects';
 import type { Word } from '@src/utils/types';
@@ -21,17 +23,27 @@ export default function TestPage() {
           const isCorrectAnswer = main.spelling === answers[index];
 
           return (
-            <div key={index} className='flex w-full items-center justify-between gap-10'>
+            <div key={index} className='flex h-10 w-full items-center justify-between gap-10'>
               <div>{main.meaning}</div>
 
-              <div className='flex items-center gap-2'>
+              <div className='flex h-full items-center gap-2'>
                 <Input
                   value={answers[index]!}
                   setValue={(value) => setAnswers((prevAnswers) => prevAnswers.with(index, value))}
                   className='!w-52'
                 />
 
-                <div className='w-12'>{showResults && <div>{isCorrectAnswer ? 'yes' : 'no'}</div>}</div>
+                <div className='h-full w-12'>
+                  {showResults && (
+                    <div className='flex h-full items-center justify-center'>
+                      {isCorrectAnswer ? (
+                        <VInCircle className='h-1/2' borderColor='#19d23a' color='#19d23a' />
+                      ) : (
+                        <XMark className='h-1/2 stroke-red-500' />
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           );
