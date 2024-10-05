@@ -24,6 +24,7 @@ export default function TestPage() {
 
   const handleNextTestClick = () => {
     setAnswers(emptyAnswers);
+    setShowResults(false);
     setShuffleValue((prev) => prev + (1 % 3));
   };
 
