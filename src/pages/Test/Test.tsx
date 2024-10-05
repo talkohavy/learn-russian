@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
-import Button from '@src/components/Button/Button';
+import Button from '@src/components/Button';
 import Input from '@src/components/Input';
-import VInCircle from '@src/components/svgs/VInCircle/VInCircle';
+import VInCircle from '@src/components/svgs/VInCircle';
 import XMark from '@src/components/svgs/XMark';
 import { allWords } from '@src/utils/constants/wordBank';
 import { getRandomObjects } from '@src/utils/getRandomObjects';
