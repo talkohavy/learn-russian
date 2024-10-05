@@ -75,7 +75,7 @@ export const greetings: Array<Word> = [
   },
   {
     main: {
-      spelling: 'прибет',
+      spelling: 'привет',
       soundsLike: '**PRI**VYET',
       meaning: ['hi', 'hello'],
     },
