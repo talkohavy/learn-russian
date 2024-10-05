@@ -24,7 +24,7 @@ export default defineConfig(({ mode }) => ({
   logLevel: 'info', // <--- default is info. Options are: info, warn, error, silent
   // envPrefix: 'VITE_', // <--- default is VITE_
   // appType: 'spa', // <--- default is spa. For ssr, use custom
-  cacheDir: './node_modules/.cache/vite',
+  cacheDir: '../node_modules/.cache/vite',
   build: {
     outDir: '../dist', // <--- default is dist. Specify the output directory (relative to project root).
     sourcemap: true, // <--- default is false. Options are: true, false, inline, hidden. Generate production source maps. If true, a separate sourcemap file will be created. If 'inline', the sourcemap will be appended to the resulting output file as a data URI. 'hidden' works like true except that the corresponding sourcemap comments in the bundled files are suppressed.
