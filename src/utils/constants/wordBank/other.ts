@@ -418,7 +418,7 @@ export const other = [
   },
   {
     main: {
-      spelling: 'кробать',
+      spelling: 'кровать',
       soundsLike: 'KRA**VAT**',
       meaning: ['bed'],
     },
