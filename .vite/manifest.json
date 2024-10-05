@@ -4,20 +4,21 @@
     "name": "types"
   },
   "index.html": {
-    "file": "main/index-CFpgMkav.js",
+    "file": "main/index-ycUDSj79.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
       "pages/Home/index.tsx",
-      "pages/Test/index.tsx"
+      "pages/Test/index.tsx",
+      "pages/RedirectToHome/index.ts"
     ],
     "css": [
-      "static/css/index.hb6rURWotsn-.css"
+      "static/css/index.B1UHG_4frNm0.css"
     ]
   },
   "pages/Home/index.tsx": {
-    "file": "static/js/index.F2K2QLRS.js",
+    "file": "static/js/index.1AwmCTuW.js",
     "name": "index",
     "src": "pages/Home/index.tsx",
     "isDynamicEntry": true,
@@ -26,8 +27,17 @@
       "_types.CasiXT6B.js"
     ]
   },
+  "pages/RedirectToHome/index.ts": {
+    "file": "static/js/index.BbKcGoKi.js",
+    "name": "index",
+    "src": "pages/RedirectToHome/index.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
   "pages/Test/index.tsx": {
-    "file": "static/js/index.B1TpKFGB.js",
+    "file": "static/js/index.djkzBd23.js",
     "name": "index",
     "src": "pages/Test/index.tsx",
     "isDynamicEntry": true,
