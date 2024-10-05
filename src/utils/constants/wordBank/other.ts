@@ -36,14 +36,6 @@ export const other = [
   },
   {
     main: {
-      spelling: '',
-      soundsLike: '',
-      meaning: [''],
-    },
-    categories: [Category.Other],
-  },
-  {
-    main: {
       spelling: 'тарелка',
       soundsLike: 'TAREILKA',
       meaning: ['plate'],
@@ -154,14 +146,6 @@ export const other = [
   },
   {
     main: {
-      spelling: '',
-      soundsLike: '',
-      meaning: [''],
-    },
-    categories: [Category.Other],
-  },
-  {
-    main: {
       spelling: 'озеро',
       soundsLike: '**O**ZIRA',
       meaning: ['lake'],
@@ -179,11 +163,6 @@ export const other = [
       soundsLike: 'TET**RAD**',
       meaning: ['notebook'],
     },
-    // plural: {
-    //   spelling: '',
-    //   soundsLike: '',
-    //   meaning: ['notebooks'],
-    // },
     categories: [Category.Other],
   },
   {

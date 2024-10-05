@@ -35,14 +35,6 @@ export const questionWord = [
   },
   {
     main: {
-      spelling: '',
-      soundsLike: '',
-      meaning: [''],
-    },
-    categories: [Category.QuestionWord],
-  },
-  {
-    main: {
       spelling: 'который',
       soundsLike: 'KATORI',
       meaning: ['which'],
