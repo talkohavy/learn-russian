@@ -3,14 +3,14 @@ import { Category, type Word } from '@src/utils/types';
 export const food: Array<Word> = [
   {
     main: {
-      spelling: 'яблокo',
+      spelling: 'яблоко',
       soundsLike: '**YA**BLAKA',
       meaning: ['apple'],
     },
     plural: {
       spelling: 'яблоки',
       soundsLike: '**YA**BLAKI',
-      meaning: ['appleс'],
+      meaning: ['apples'],
     },
     categories: [Category.Food],
   },
