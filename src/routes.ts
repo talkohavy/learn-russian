@@ -1,11 +1,10 @@
 import { lazy } from 'react';
+import { BASE_URL } from './utils/constants';
 import type { Route } from './utils/types';
 
 const HomePage = lazy(() => import('./pages/Home'));
 const TestPage = lazy(() => import('./pages/Test'));
 const RedirectToHome = lazy(() => import('./pages/RedirectToHome'));
-
-const BASE_URL = '/learn-russian';
 
 export const routes: Array<Route> = [
   {
