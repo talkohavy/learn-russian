@@ -1,15 +1,25 @@
+import type { LazyExoticComponent, ReactNode } from 'react';
+
+type WordMeta = {
+  spelling: string;
+  meaning: Array<string>;
+  soundsLike: string;
+};
+
+export type Route = {
+  to: string;
+  text: string;
+  activeNames: Array<string>;
+  Component: (() => JSX.Element) | LazyExoticComponent<() => ReactNode>;
+  hideFromSidebar?: boolean;
+};
+
 export type Word = {
   main: WordMeta;
   male?: WordMeta;
   female?: WordMeta;
   plural?: WordMeta;
   categories: Array<Category>;
-};
-
-type WordMeta = {
-  spelling: string;
-  meaning: Array<string>;
-  soundsLike: string;
 };
 
 export enum Category {
