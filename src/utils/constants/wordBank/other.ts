@@ -443,7 +443,7 @@ export const other = [
   {
     main: {
       spelling: 'камень',
-      soundsLike: '**KA**MIN',
+      soundsLike: '**KA**MYEN',
       meaning: ['stone'],
     },
     categories: [Category.Other],
