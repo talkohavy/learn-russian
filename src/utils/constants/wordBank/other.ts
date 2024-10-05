@@ -477,4 +477,36 @@ export const other = [
     },
     categories: [Category.Other],
   },
+  {
+    main: {
+      spelling: 'далеко',
+      soundsLike: 'DALIE**KO**',
+      meaning: ['far away'],
+    },
+    categories: [Category.Other],
+  },
+  {
+    main: {
+      spelling: 'площадь',
+      soundsLike: '**PLO**SHID',
+      meaning: ['the area', 'square'],
+    },
+    categories: [Category.Other],
+  },
+  {
+    main: {
+      spelling: '',
+      soundsLike: '',
+      meaning: ['on', 'is on', 'there is...on'],
+    },
+    categories: [Category.Other],
+  },
+  // {
+  //   main: {
+  //     spelling: '',
+  //     soundsLike: '',
+  //     meaning: [''],
+  //   },
+  //   categories: [Category.Other],
+  // },
 ];
