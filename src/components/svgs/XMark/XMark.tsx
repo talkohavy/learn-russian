@@ -5,7 +5,7 @@ type XMarkProps = {
 };
 
 export default function XMark(props: XMarkProps) {
-  const { color = 'currentColor', className, title } = props;
+  const { color = 'currentColor', className, title = 'x mark' } = props;
 
   return (
     <svg viewBox='0 0 100 100' strokeWidth={8} stroke={color} strokeLinecap='round' className={className}>

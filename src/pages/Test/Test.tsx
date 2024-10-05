@@ -1,11 +1,15 @@
 import { useMemo, useState } from 'react';
 import Button from '@src/components/Button';
 import Input from '@src/components/Input';
+import Retry from '@src/components/svgs/Retry';
 import VInCircle from '@src/components/svgs/VInCircle';
 import XMark from '@src/components/svgs/XMark';
 import { allWords } from '@src/utils/constants/wordBank';
 import { getRandomObjects } from '@src/utils/getRandomObjects';
 import type { Word } from '@src/utils/types';
+
+const wordsInTestCount = 10;
+const emptyAnswers = Array.from(Array(wordsInTestCount)).map(() => '');
 
 export default function TestPage() {
   const [showResults, setShowResults] = useState<boolean>();
@@ -14,10 +18,19 @@ export default function TestPage() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const randomWords = useMemo(() => getRandomObjects<Word>(allWords), [shuffleValue]);
 
-  const [answers, setAnswers] = useState<Array<string>>(() => Array.from(Array(randomWords.length)).map(() => ''));
+  const [answers, setAnswers] = useState<Array<string>>(() => emptyAnswers);
 
   const handleTestClick = () => setShowResults(true);
-  const handleNextTestClick = () => setShuffleValue((prev) => prev + (1 % 3));
+
+  const handleNextTestClick = () => {
+    setAnswers(emptyAnswers);
+    setShuffleValue((prev) => prev + (1 % 3));
+  };
+
+  const handleRetryTestClick = () => {
+    setAnswers(emptyAnswers);
+    setShowResults(false);
+  };
 
   return (
     <div className='flex size-full flex-col items-center justify-center gap-10 p-6'>
@@ -53,13 +66,21 @@ export default function TestPage() {
         })}
       </div>
 
-      <div className='flex items-center justify-center gap-4'>
-        <Button content='Check' onClick={handleTestClick} />
+      <div className='flex w-full max-w-md items-center justify-between gap-4'>
+        <Button content='Check' onClick={handleTestClick} className='h-10 w-24' />
+
+        <Button
+          content='retry'
+          onClick={handleRetryTestClick}
+          className='flex flex-col-reverse items-center justify-center gap-1 bg-neutral-600 hover:bg-neutral-700 active:bg-neutral-800'
+        >
+          <Retry className='size-4' />
+        </Button>
 
         <Button
           content='Next'
           onClick={handleNextTestClick}
-          className='bg-neutral-600 hover:bg-neutral-700 active:bg-neutral-800'
+          className='h-10 w-24 bg-green-600 hover:bg-green-700 active:bg-green-800'
         />
       </div>
     </div>

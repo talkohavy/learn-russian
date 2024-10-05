@@ -1,15 +1,15 @@
-import type { ReactNode } from 'react';
+import type { PropsWithChildren, ReactNode } from 'react';
 import clsx from 'clsx';
 
-type ButtonProps = {
+type ButtonProps = PropsWithChildren<{
   onClick: (e: any) => void;
   content: ReactNode;
   disabled?: boolean;
   className?: string;
-};
+}>;
 
 export default function Button(props: ButtonProps) {
-  const { content, onClick, disabled, className } = props;
+  const { content, onClick, disabled, children, className } = props;
 
   return (
     <button
@@ -22,6 +22,7 @@ export default function Button(props: ButtonProps) {
       )}
     >
       {content}
+      {children}
     </button>
   );
 }
