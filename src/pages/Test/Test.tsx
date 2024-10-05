@@ -12,7 +12,7 @@ export default function TestPage() {
 
   const randomWords = useMemo(() => getRandomObjects<Word>(allWords), []);
 
-  const [answers, setAnswers] = useState<Array<string>>(() => Array.from(Array(randomWords.length).map(() => '')));
+  const [answers, setAnswers] = useState<Array<string>>(() => Array.from(Array(randomWords.length)).map(() => ''));
 
   const handleTestClick = () => setShowResults(true);
 
