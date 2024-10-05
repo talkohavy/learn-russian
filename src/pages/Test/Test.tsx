@@ -9,16 +9,19 @@ import type { Word } from '@src/utils/types';
 
 export default function TestPage() {
   const [showResults, setShowResults] = useState<boolean>();
+  const [shuffleValue, setShuffleValue] = useState<number>(0);
 
-  const randomWords = useMemo(() => getRandomObjects<Word>(allWords), []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const randomWords = useMemo(() => getRandomObjects<Word>(allWords), [shuffleValue]);
 
   const [answers, setAnswers] = useState<Array<string>>(() => Array.from(Array(randomWords.length)).map(() => ''));
 
   const handleTestClick = () => setShowResults(true);
+  const handleNextTestClick = () => setShuffleValue((prev) => prev + (1 % 3));
 
   return (
     <div className='flex size-full flex-col items-center justify-center gap-10 p-6'>
-      <div className='flex w-full max-w-md flex-col gap-3 border'>
+      <div className='flex w-full max-w-md flex-col gap-3 rounded-md border p-4'>
         {randomWords.map(({ main }, index) => {
           const isCorrectAnswer = main.spelling === answers[index];
 
@@ -50,7 +53,15 @@ export default function TestPage() {
         })}
       </div>
 
-      <Button content='Check' onClick={handleTestClick} />
+      <div className='flex items-center justify-center gap-4'>
+        <Button content='Check' onClick={handleTestClick} />
+
+        <Button
+          content='Next'
+          onClick={handleNextTestClick}
+          className='bg-neutral-600 hover:bg-neutral-700 active:bg-neutral-800'
+        />
+      </div>
     </div>
   );
 }

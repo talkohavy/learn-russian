@@ -19,7 +19,7 @@ export default function Input(props: InputProps) {
       onChange={(e) => setValue(e.target.value)}
       placeholder={placeholder}
       disabled={disabled}
-      className={clsx('h-10 w-72 rounded-md border border-black p-2', className)}
+      className={clsx('h-10 w-72 rounded-md border border-black p-2 dark:bg-slate-900', className)}
     />
   );
 }
