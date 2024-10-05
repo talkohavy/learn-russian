@@ -24,7 +24,7 @@ export default function TestPage() {
 
           return (
             <div key={index} className='flex h-10 w-full items-center justify-between gap-10'>
-              <div>{main.meaning}</div>
+              <div>{main.meaning[0]}</div>
 
               <div className='flex h-full items-center gap-2'>
                 <Input

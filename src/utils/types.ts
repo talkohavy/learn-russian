@@ -16,6 +16,7 @@ export enum Category {
   Animals = 'animals',
   Jobs = 'jobs',
   Food = 'food',
+  Drinks = 'drinks',
   Colors = 'colors',
   BodyParts = 'body-parts',
   BodyRelation = 'body-relation',
