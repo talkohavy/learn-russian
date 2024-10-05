@@ -489,7 +489,7 @@ export const other = [
     main: {
       spelling: 'площадь',
       soundsLike: '**PLO**SHID',
-      meaning: ['the area', 'square'],
+      meaning: ['square (place)'],
     },
     categories: [Category.Other],
   },

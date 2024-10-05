@@ -83,7 +83,7 @@ export const greetings: Array<Word> = [
   },
   {
     main: {
-      spelling: 'спасибо',
+      spelling: 'спосибо',
       soundsLike: 'SPA**SI**BA',
       meaning: ['thank you'],
     },
