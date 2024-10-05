@@ -62,7 +62,7 @@ export const other = [
   },
   {
     main: {
-      spelling: 'девочкa',
+      spelling: 'девочка',
       soundsLike: '**DYE**VOCHKA',
       meaning: ['girl'],
     },
@@ -495,8 +495,8 @@ export const other = [
   },
   {
     main: {
-      spelling: '',
-      soundsLike: '',
+      spelling: 'на',
+      soundsLike: 'NA',
       meaning: ['on', 'is on', 'there is...on'],
     },
     categories: [Category.Other],
