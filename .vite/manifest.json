@@ -4,7 +4,7 @@
     "name": "types"
   },
   "index.html": {
-    "file": "main/index-ycUDSj79.js",
+    "file": "main/index-CHFjysUD.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -14,11 +14,11 @@
       "pages/RedirectToHome/index.ts"
     ],
     "css": [
-      "static/css/index.B1UHG_4frNm0.css"
+      "static/css/index.jBntdpGgKJGi.css"
     ]
   },
   "pages/Home/index.tsx": {
-    "file": "static/js/index.1AwmCTuW.js",
+    "file": "static/js/index.CJI-V6OS.js",
     "name": "index",
     "src": "pages/Home/index.tsx",
     "isDynamicEntry": true,
@@ -28,7 +28,7 @@
     ]
   },
   "pages/RedirectToHome/index.ts": {
-    "file": "static/js/index.BbKcGoKi.js",
+    "file": "static/js/index.KltmTuzF.js",
     "name": "index",
     "src": "pages/RedirectToHome/index.ts",
     "isDynamicEntry": true,
@@ -37,7 +37,7 @@
     ]
   },
   "pages/Test/index.tsx": {
-    "file": "static/js/index.djkzBd23.js",
+    "file": "static/js/index.LIa8W0Mp.js",
     "name": "index",
     "src": "pages/Test/index.tsx",
     "isDynamicEntry": true,
