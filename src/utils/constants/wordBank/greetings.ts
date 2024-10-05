@@ -44,7 +44,7 @@ export const greetings: Array<Word> = [
   {
     main: {
       spelling: 'SPAKOINI NOCHI',
-      soundsLike: 'спакойной ночи',
+      soundsLike: 'спокойной ночи',
       meaning: ['good night'],
     },
     categories: [Category.Greetings],
