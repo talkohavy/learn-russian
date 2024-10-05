@@ -9,6 +9,86 @@ export const greetings: Array<Word> = [
     },
     categories: [Category.Greetings],
   },
+  {
+    main: {
+      spelling: 'добро пожаловать',
+      soundsLike: 'DAB**RO** PA**ZHA**LOVET',
+      meaning: ['welcome'],
+    },
+    categories: [Category.Greetings],
+  },
+  {
+    main: {
+      spelling: 'до завтра',
+      soundsLike: 'DA ZAVTRA',
+      meaning: ['see you tomorrow'],
+    },
+    categories: [Category.Greetings],
+  },
+  {
+    main: {
+      spelling: 'как дела',
+      soundsLike: 'KAK DYELA',
+      meaning: ['how are you?'],
+    },
+    categories: [Category.Greetings],
+  },
+  {
+    main: {
+      spelling: 'хорошо',
+      soundsLike: 'HARASHO',
+      meaning: ['fine', 'ok'],
+    },
+    categories: [Category.Greetings],
+  },
+  {
+    main: {
+      spelling: 'SPAKOINI NOCHI',
+      soundsLike: 'спакойной ночи',
+      meaning: ['good night'],
+    },
+    categories: [Category.Greetings],
+  },
+  {
+    main: {
+      spelling: 'пока',
+      soundsLike: 'PA**KA**',
+      meaning: ['bye'],
+    },
+    categories: [Category.Greetings],
+  },
+  {
+    main: {
+      spelling: 'пожалуйста',
+      soundsLike: 'PA**ZHA**LUISTA',
+      meaning: ['please'],
+    },
+    categories: [Category.Greetings],
+  },
+  {
+    main: {
+      spelling: 'извините',
+      soundsLike: 'IZVINITY',
+      meaning: ['excuse me', 'sorry'],
+    },
+    categories: [Category.Greetings],
+  },
+  {
+    main: {
+      spelling: 'прибет',
+      soundsLike: '**PRI**VYET',
+      meaning: ['hi', 'hello'],
+    },
+    categories: [Category.Greetings],
+  },
+  {
+    main: {
+      spelling: 'спасибо',
+      soundsLike: 'SPA**SI**BA',
+      meaning: ['thank you'],
+    },
+    categories: [Category.Greetings],
+  },
   // {
   //   main: {
   //     spelling: '',

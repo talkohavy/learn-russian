@@ -9,6 +9,54 @@ export const countries: Array<Word> = [
     },
     categories: [Category.Countries],
   },
+  {
+    main: {
+      spelling: 'бразилия',
+      soundsLike: 'BRA**ZIL**IA',
+      meaning: ['Brazil'],
+    },
+    categories: [Category.Countries],
+  },
+  {
+    main: {
+      spelling: 'канада',
+      soundsLike: 'KA**NA**DA',
+      meaning: ['Canada'],
+    },
+    categories: [Category.Countries],
+  },
+  {
+    main: {
+      spelling: 'россия',
+      soundsLike: 'RA**SIA**',
+      meaning: ['Russia'],
+    },
+    categories: [Category.Countries],
+  },
+  {
+    main: {
+      spelling: 'италия',
+      soundsLike: 'I**TA**LIYA',
+      meaning: ['Italy'],
+    },
+    categories: [Category.Countries],
+  },
+  {
+    main: {
+      spelling: 'монголия',
+      soundsLike: 'MAN**GO**LIYA',
+      meaning: ['Mongolia'],
+    },
+    categories: [Category.Countries],
+  },
+  {
+    main: {
+      spelling: 'украина',
+      soundsLike: 'UKRA**INA**',
+      meaning: ['Ukraine'],
+    },
+    categories: [Category.Countries],
+  },
   // {
   //   main: {
   //     spelling: '',

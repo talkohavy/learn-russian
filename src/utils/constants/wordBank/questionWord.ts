@@ -49,4 +49,20 @@ export const questionWord = [
     },
     categories: [Category.QuestionWord],
   },
+  {
+    main: {
+      spelling: 'сколько',
+      soundsLike: '**SKO**LKA',
+      meaning: ['how much'],
+    },
+    categories: [Category.QuestionWord],
+  },
+  {
+    main: {
+      spelling: 'как',
+      soundsLike: 'KAK',
+      meaning: ['how'],
+    },
+    categories: [Category.QuestionWord],
+  },
 ];
