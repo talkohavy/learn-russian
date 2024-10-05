@@ -1,10 +1,10 @@
 {
-  "_types.uyohP_cB.js": {
-    "file": "static/js/types.uyohP_cB.js",
+  "_types.CasiXT6B.js": {
+    "file": "static/js/types.CasiXT6B.js",
     "name": "types"
   },
   "index.html": {
-    "file": "main/index-BAElqrkf.js",
+    "file": "main/index-BO4I97Hz.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -13,27 +13,27 @@
       "pages/Test/index.tsx"
     ],
     "css": [
-      "static/css/index.CTAl8O6tbimF.css"
+      "static/css/index.hb6rURWotsn-.css"
     ]
   },
   "pages/Home/index.tsx": {
-    "file": "static/js/index.CzWosomB.js",
+    "file": "static/js/index.GwOIvyH3.js",
     "name": "index",
     "src": "pages/Home/index.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_types.uyohP_cB.js"
+      "_types.CasiXT6B.js"
     ]
   },
   "pages/Test/index.tsx": {
-    "file": "static/js/index.CVtIW39M.js",
+    "file": "static/js/index.DXNGug-O.js",
     "name": "index",
     "src": "pages/Test/index.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_types.uyohP_cB.js"
+      "_types.CasiXT6B.js"
     ]
   }
 }
