@@ -84,7 +84,7 @@ export const other = [
   {
     main: {
       spelling: 'мужчина',
-      soundsLike: 'MUI**SHI**NA',
+      soundsLike: "MUI**ZHCH'I**NA",
       meaning: ['man'],
     },
     plural: {
