@@ -7,6 +7,7 @@ export const family = [
       soundsLike: 'MAMA',
       meaning: ['mom'],
     },
+    points: 0,
     categories: [Category.Family],
   },
   {
@@ -15,6 +16,7 @@ export const family = [
       soundsLike: 'PAPA',
       meaning: ['dad'],
     },
+    points: 0,
     categories: [Category.Family],
   },
   {
@@ -23,6 +25,7 @@ export const family = [
       soundsLike: 'BRAT',
       meaning: ['brother'],
     },
+    points: 0,
     categories: [Category.Family],
   },
   {
@@ -36,6 +39,7 @@ export const family = [
       soundsLike: 'SIYOSTRI',
       meaning: ['sisters'],
     },
+    points: 0,
     categories: [Category.Family],
   },
 ];

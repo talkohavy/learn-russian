@@ -12,6 +12,7 @@ export const animals: Array<Word> = [
       soundsLike: '**LO**SHEDI',
       meaning: ['horses'],
     },
+    points: 0,
     categories: [Category.Animals],
   },
   {
@@ -25,6 +26,7 @@ export const animals: Array<Word> = [
       soundsLike: '**KO**SHKI',
       meaning: ['cats'],
     },
+    points: 0,
     categories: [Category.Animals],
   },
   {
@@ -33,6 +35,7 @@ export const animals: Array<Word> = [
       soundsLike: 'SA**BA**KA',
       meaning: ['dog'],
     },
+    points: 0,
     categories: [Category.Animals],
   },
   {
@@ -41,6 +44,7 @@ export const animals: Array<Word> = [
       soundsLike: 'AR**YOL**',
       meaning: ['eagle'],
     },
+    points: 0,
     categories: [Category.Animals],
   },
   // {

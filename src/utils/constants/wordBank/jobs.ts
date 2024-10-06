@@ -12,6 +12,7 @@ export const jobs = [
       soundsLike: 'AKTYORI',
       meaning: ['actors'],
     },
+    points: 0,
     categories: [Category.Jobs],
   },
   {
@@ -20,6 +21,7 @@ export const jobs = [
       soundsLike: '**TRAI**NER',
       meaning: ['coach'],
     },
+    points: 0,
     categories: [Category.Jobs],
   },
   {
@@ -28,6 +30,7 @@ export const jobs = [
       soundsLike: '**KA**PITAN',
       meaning: ['captain'],
     },
+    points: 0,
     categories: [Category.Jobs],
   },
   {
@@ -36,6 +39,7 @@ export const jobs = [
       soundsLike: '**PO**VAR',
       meaning: ['cook'],
     },
+    points: 0,
     categories: [Category.Jobs],
   },
   {
@@ -44,6 +48,7 @@ export const jobs = [
       soundsLike: '**DOK**TOR',
       meaning: ['doctor'],
     },
+    points: 0,
     categories: [Category.Jobs],
   },
   {
@@ -52,6 +57,7 @@ export const jobs = [
       soundsLike: '**EN**ZHINIR',
       meaning: ['engineer'],
     },
+    points: 0,
     categories: [Category.Jobs],
   },
   {
@@ -60,6 +66,7 @@ export const jobs = [
       soundsLike: "U**CH'I**TYEL",
       meaning: ['teacher'],
     },
+    points: 0,
     categories: [Category.Jobs],
   },
   {
@@ -68,6 +75,7 @@ export const jobs = [
       soundsLike: 'PSI**HO**LOG',
       meaning: ['psychologist'],
     },
+    points: 0,
     categories: [Category.Jobs],
   },
   {
@@ -76,6 +84,7 @@ export const jobs = [
       soundsLike: 'PA**LI**TIC',
       meaning: ['politician'],
     },
+    points: 0,
     categories: [Category.Jobs],
   },
   {
@@ -84,6 +93,7 @@ export const jobs = [
       soundsLike: 'MOOZI**KANT**',
       meaning: ['musician'],
     },
+    points: 0,
     categories: [Category.Jobs],
   },
   {
@@ -92,6 +102,7 @@ export const jobs = [
       soundsLike: 'PI**LOT**',
       meaning: ['pilot'],
     },
+    points: 0,
     categories: [Category.Jobs],
   },
 ];

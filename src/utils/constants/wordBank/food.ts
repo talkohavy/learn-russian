@@ -12,6 +12,7 @@ export const food: Array<Word> = [
       soundsLike: '**YA**BLAKI',
       meaning: ['apples'],
     },
+    points: 0,
     categories: [Category.Food],
   },
   {
@@ -25,6 +26,7 @@ export const food: Array<Word> = [
       soundsLike: '**YA**ICHA',
       meaning: ['eggs'],
     },
+    points: 0,
     categories: [Category.Food],
   },
   {
@@ -33,6 +35,7 @@ export const food: Array<Word> = [
       soundsLike: 'PICHA',
       meaning: ['pizza'],
     },
+    points: 0,
     categories: [Category.Food],
   },
   {
@@ -41,6 +44,7 @@ export const food: Array<Word> = [
       soundsLike: 'HLEB',
       meaning: ['bread'],
     },
+    points: 0,
     categories: [Category.Food],
   },
   {
@@ -49,6 +53,7 @@ export const food: Array<Word> = [
       soundsLike: 'BANAN',
       meaning: ['banana'],
     },
+    points: 0,
     categories: [Category.Food],
   },
   {
@@ -57,6 +62,7 @@ export const food: Array<Word> = [
       soundsLike: 'MI**YA**SA',
       meaning: ['meat'],
     },
+    points: 0,
     categories: [Category.Food],
   },
   {
@@ -65,6 +71,7 @@ export const food: Array<Word> = [
       soundsLike: 'SUP',
       meaning: ['soup'],
     },
+    points: 0,
     categories: [Category.Food],
   },
   {
@@ -73,6 +80,7 @@ export const food: Array<Word> = [
       soundsLike: 'MALA**KO**',
       meaning: ['milk'],
     },
+    points: 0,
     categories: [Category.Food],
   },
   {
@@ -81,6 +89,7 @@ export const food: Array<Word> = [
       soundsLike: 'SIER',
       meaning: ['cheese'],
     },
+    points: 0,
     categories: [Category.Food],
   },
   {
@@ -89,6 +98,7 @@ export const food: Array<Word> = [
       soundsLike: 'BICON',
       meaning: ['bacon'],
     },
+    points: 0,
     categories: [Category.Food],
   },
   {
@@ -97,6 +107,7 @@ export const food: Array<Word> = [
       soundsLike: 'SALAT',
       meaning: ['salad'],
     },
+    points: 0,
     categories: [Category.Food],
   },
   // {

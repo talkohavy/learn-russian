@@ -7,6 +7,7 @@ export const bodyRelation = [
       soundsLike: 'YA',
       meaning: ['I'],
     },
+    points: 0,
     categories: [Category.BodyRelation],
   },
   {
@@ -15,6 +16,7 @@ export const bodyRelation = [
       soundsLike: 'ON',
       meaning: ['he'],
     },
+    points: 0,
     categories: [Category.BodyRelation],
   },
   {
@@ -23,6 +25,7 @@ export const bodyRelation = [
       soundsLike: 'A**NA**',
       meaning: ['she'],
     },
+    points: 0,
     categories: [Category.BodyRelation],
   },
   {
@@ -31,6 +34,7 @@ export const bodyRelation = [
       soundsLike: 'MUI',
       meaning: ['we'],
     },
+    points: 0,
     categories: [Category.BodyRelation],
   },
   {
@@ -39,6 +43,7 @@ export const bodyRelation = [
       soundsLike: 'ANI',
       meaning: ['they'],
     },
+    points: 0,
     categories: [Category.BodyRelation],
   },
   {
@@ -47,6 +52,7 @@ export const bodyRelation = [
       soundsLike: 'TI',
       meaning: ['you (single)'],
     },
+    points: 0,
     categories: [Category.BodyRelation],
   },
   {
@@ -55,6 +61,7 @@ export const bodyRelation = [
       soundsLike: 'VUI',
       meaning: ['you (plural)'],
     },
+    points: 0,
     categories: [Category.BodyRelation],
   },
 ];

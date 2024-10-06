@@ -7,6 +7,7 @@ export const questionWord = [
       soundsLike: 'GDE',
       meaning: ['where'],
     },
+    points: 0,
     categories: [Category.QuestionWord],
   },
   {
@@ -15,6 +16,7 @@ export const questionWord = [
       soundsLike: 'KTO',
       meaning: ['who'],
     },
+    points: 0,
     categories: [Category.QuestionWord],
   },
   {
@@ -23,6 +25,7 @@ export const questionWord = [
       soundsLike: 'SHTO',
       meaning: ['what'],
     },
+    points: 0,
     categories: [Category.QuestionWord],
   },
   {
@@ -31,6 +34,7 @@ export const questionWord = [
       soundsLike: 'KAGDA',
       meaning: ['when'],
     },
+    points: 0,
     categories: [Category.QuestionWord],
   },
   {
@@ -39,6 +43,7 @@ export const questionWord = [
       soundsLike: 'KATORI',
       meaning: ['which'],
     },
+    points: 0,
     categories: [Category.QuestionWord],
   },
   {
@@ -47,6 +52,7 @@ export const questionWord = [
       soundsLike: 'PACHIMU',
       meaning: ['why'],
     },
+    points: 0,
     categories: [Category.QuestionWord],
   },
   {
@@ -55,6 +61,7 @@ export const questionWord = [
       soundsLike: '**SKO**LKA',
       meaning: ['how much'],
     },
+    points: 0,
     categories: [Category.QuestionWord],
   },
   {
@@ -63,6 +70,7 @@ export const questionWord = [
       soundsLike: 'KAK',
       meaning: ['how'],
     },
+    points: 0,
     categories: [Category.QuestionWord],
   },
 ];

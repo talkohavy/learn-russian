@@ -7,6 +7,7 @@ export const drinks = [
       soundsLike: 'CHAI',
       meaning: ['tea'],
     },
+    points: 0,
     categories: [Category.Drinks],
   },
   {
@@ -15,6 +16,7 @@ export const drinks = [
       soundsLike: '**KO**FИ',
       meaning: ['coffee'],
     },
+    points: 0,
     categories: [Category.Drinks],
   },
   {
@@ -23,6 +25,7 @@ export const drinks = [
       soundsLike: 'SOK',
       meaning: ['juice'],
     },
+    points: 0,
     categories: [Category.Drinks],
   },
   {
@@ -31,6 +34,7 @@ export const drinks = [
       soundsLike: 'VI**NO**',
       meaning: ['wine'],
     },
+    points: 0,
     categories: [Category.Drinks],
   },
   {
@@ -39,6 +43,7 @@ export const drinks = [
       soundsLike: 'VADA',
       meaning: ['water'],
     },
+    points: 0,
     categories: [Category.Drinks, Category.Other],
   },
 ];

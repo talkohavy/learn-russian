@@ -7,6 +7,7 @@ export const other = [
       soundsLike: 'DROOG',
       meaning: ['friend'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -15,6 +16,7 @@ export const other = [
       soundsLike: 'ZDIS',
       meaning: ['here'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -23,6 +25,7 @@ export const other = [
       soundsLike: 'TAM',
       meaning: ['there'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -32,6 +35,7 @@ export const other = [
       meaning: ['this'],
       // metadata: ['етот', 'эти']
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -45,6 +49,7 @@ export const other = [
       soundsLike: 'TAREILKI',
       meaning: ['plates'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -58,6 +63,7 @@ export const other = [
       soundsLike: '**MAL**CHIKI',
       meaning: ['boys'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -71,6 +77,7 @@ export const other = [
       soundsLike: '**DYE**VOCHKI',
       meaning: ['girls'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -79,6 +86,7 @@ export const other = [
       soundsLike: '**DEY**TI',
       meaning: ['children'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -92,6 +100,7 @@ export const other = [
       soundsLike: 'MUI**SHI**NI',
       meaning: ['men'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -105,6 +114,7 @@ export const other = [
       soundsLike: '**ZHEN**SHINIE',
       meaning: ['women'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -113,6 +123,7 @@ export const other = [
       soundsLike: 'DOM',
       meaning: ['house'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -126,6 +137,7 @@ export const other = [
       soundsLike: '**O**FISI',
       meaning: ['offices'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -134,6 +146,7 @@ export const other = [
       soundsLike: 'MET**RO**',
       meaning: ['subway'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -142,6 +155,7 @@ export const other = [
       soundsLike: 'CHELA**VEK**',
       meaning: ['person'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -155,6 +169,7 @@ export const other = [
       soundsLike: 'AZ**YO**RA',
       meaning: ['lakes'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -163,6 +178,7 @@ export const other = [
       soundsLike: 'TET**RAD**',
       meaning: ['notebook'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -176,6 +192,7 @@ export const other = [
       soundsLike: 'STA**LUI**',
       meaning: ['tables'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -189,6 +206,7 @@ export const other = [
       soundsLike: 'PALA**TIEN**TSA',
       meaning: ['towels'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -197,6 +215,7 @@ export const other = [
       soundsLike: 'TYELEPHON',
       meaning: ['phone'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -205,6 +224,7 @@ export const other = [
       soundsLike: 'TAKSI',
       meaning: ['taxi'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -213,6 +233,7 @@ export const other = [
       soundsLike: 'PLAN',
       meaning: ['plan'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -221,6 +242,7 @@ export const other = [
       soundsLike: 'REB**YO**NAK',
       meaning: ['child', 'baby'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -229,6 +251,7 @@ export const other = [
       soundsLike: 'VELOSIP**YED**',
       meaning: ['bicycle'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -237,6 +260,7 @@ export const other = [
       soundsLike: 'NU',
       meaning: ['well'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -245,6 +269,7 @@ export const other = [
       soundsLike: 'VSO',
       meaning: ['everything', 'all', 'anything'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -253,6 +278,7 @@ export const other = [
       soundsLike: 'UZHE',
       meaning: ['already'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -261,6 +287,7 @@ export const other = [
       soundsLike: 'KANI**YECH**NA',
       meaning: ['of course'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -269,6 +296,7 @@ export const other = [
       soundsLike: 'UTRA',
       meaning: ['morning'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -277,6 +305,7 @@ export const other = [
       soundsLike: 'KAFE',
       meaning: ['cafe'],
     },
+    points: 0,
     categories: [Category.Other],
   },
 
@@ -286,6 +315,7 @@ export const other = [
       soundsLike: 'PARK',
       meaning: ['park'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -294,6 +324,7 @@ export const other = [
       soundsLike: 'DOBREY',
       meaning: ['good', 'kind', 'nice'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -302,6 +333,7 @@ export const other = [
       soundsLike: 'DYELA',
       meaning: ['matter', 'business', 'case'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -310,6 +342,7 @@ export const other = [
       soundsLike: 'DYЕN',
       meaning: ['day'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -318,6 +351,7 @@ export const other = [
       soundsLike: '**VYE**CHER',
       meaning: ['evening'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -326,6 +360,7 @@ export const other = [
       soundsLike: '**GO**RAD',
       meaning: ['city'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -334,6 +369,7 @@ export const other = [
       soundsLike: '**SVI**TER',
       meaning: ['Sweater'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -342,6 +378,7 @@ export const other = [
       soundsLike: '**I**LI',
       meaning: ['or'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -350,6 +387,7 @@ export const other = [
       soundsLike: '**RIU**KZAK',
       meaning: ['backpack'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -358,6 +396,7 @@ export const other = [
       soundsLike: 'DA',
       meaning: ['yes'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -366,6 +405,7 @@ export const other = [
       soundsLike: 'NYET',
       meaning: ['no'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -374,6 +414,7 @@ export const other = [
       soundsLike: 'MENU',
       meaning: ['menu'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -382,6 +423,7 @@ export const other = [
       soundsLike: 'SON',
       meaning: ['dream'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -390,6 +432,7 @@ export const other = [
       soundsLike: 'MALYENKI',
       meaning: ['small'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -398,6 +441,7 @@ export const other = [
       soundsLike: 'ZHAL',
       meaning: ['what a pity', 'it is a pitty', 'sorry'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -406,6 +450,7 @@ export const other = [
       soundsLike: 'YOGA',
       meaning: ['yoga'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -414,6 +459,7 @@ export const other = [
       soundsLike: 'SHORTI',
       meaning: ['shorts'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -422,6 +468,7 @@ export const other = [
       soundsLike: 'KRA**VAT**',
       meaning: ['bed'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -430,6 +477,7 @@ export const other = [
       soundsLike: '**TO**ZHE',
       meaning: ['also', 'too'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -438,6 +486,7 @@ export const other = [
       soundsLike: '**TU**ALET',
       meaning: ['toilet', 'bathroom'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -446,6 +495,7 @@ export const other = [
       soundsLike: '**KA**MYEN',
       meaning: ['stone'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -459,6 +509,7 @@ export const other = [
       soundsLike: 'DVIRI',
       meaning: ['doors'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -467,6 +518,7 @@ export const other = [
       soundsLike: 'KARAN**DASH**',
       meaning: ['pencil'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -475,6 +527,7 @@ export const other = [
       soundsLike: 'DYEREVA',
       meaning: ['tree'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -483,6 +536,7 @@ export const other = [
       soundsLike: 'DALIE**KO**',
       meaning: ['far away'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -491,6 +545,7 @@ export const other = [
       soundsLike: '**PLO**SHID',
       meaning: ['square (place)'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   {
@@ -499,6 +554,7 @@ export const other = [
       soundsLike: 'NA',
       meaning: ['on', 'is on', 'there is...on'],
     },
+    points: 0,
     categories: [Category.Other],
   },
   // {

@@ -19,6 +19,7 @@ export type Word = {
   male?: WordMeta;
   female?: WordMeta;
   plural?: WordMeta;
+  points: number;
   categories: Array<Category>;
 };
 

@@ -7,6 +7,7 @@ export const countries: Array<Word> = [
       soundsLike: 'A**ME**RIKA',
       meaning: ['America'],
     },
+    points: 0,
     categories: [Category.Countries],
   },
   {
@@ -15,6 +16,7 @@ export const countries: Array<Word> = [
       soundsLike: 'BRA**ZIL**IA',
       meaning: ['Brazil'],
     },
+    points: 0,
     categories: [Category.Countries],
   },
   {
@@ -23,6 +25,7 @@ export const countries: Array<Word> = [
       soundsLike: 'KA**NA**DA',
       meaning: ['Canada'],
     },
+    points: 0,
     categories: [Category.Countries],
   },
   {
@@ -31,6 +34,7 @@ export const countries: Array<Word> = [
       soundsLike: 'RA**SIA**',
       meaning: ['Russia'],
     },
+    points: 0,
     categories: [Category.Countries],
   },
   {
@@ -39,6 +43,7 @@ export const countries: Array<Word> = [
       soundsLike: 'I**TA**LIYA',
       meaning: ['Italy'],
     },
+    points: 0,
     categories: [Category.Countries],
   },
   {
@@ -47,6 +52,7 @@ export const countries: Array<Word> = [
       soundsLike: 'MAN**GO**LIYA',
       meaning: ['Mongolia'],
     },
+    points: 0,
     categories: [Category.Countries],
   },
   {
@@ -55,6 +61,7 @@ export const countries: Array<Word> = [
       soundsLike: 'UKRA**INA**',
       meaning: ['Ukraine'],
     },
+    points: 0,
     categories: [Category.Countries],
   },
   // {

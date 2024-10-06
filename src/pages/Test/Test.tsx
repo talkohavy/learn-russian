@@ -5,8 +5,7 @@ import Retry from '@src/components/svgs/Retry';
 import VInCircle from '@src/components/svgs/VInCircle';
 import XMark from '@src/components/svgs/XMark';
 import { allWords } from '@src/utils/constants/wordBank';
-import { getRandomObjects } from '@src/utils/getRandomObjects';
-import type { Word } from '@src/utils/types';
+import { SelectionStrategies, selectKWords } from './logic/selectKWords';
 
 const wordsInTestCount = 10;
 const emptyAnswers = Array.from(Array(wordsInTestCount)).map(() => '');
@@ -15,8 +14,11 @@ export default function TestPage() {
   const [showResults, setShowResults] = useState<boolean>();
   const [shuffleValue, setShuffleValue] = useState<number>(0);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const randomWords = useMemo(() => getRandomObjects<Word>(allWords), [shuffleValue]);
+  const randomWords = useMemo(
+    () => selectKWords({ data: allWords, strategy: SelectionStrategies.Knowledge, wordCount: wordsInTestCount }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [shuffleValue],
+  );
 
   const [answers, setAnswers] = useState<Array<string>>(() => emptyAnswers);
 

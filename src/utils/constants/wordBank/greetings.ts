@@ -7,6 +7,7 @@ export const greetings: Array<Word> = [
       soundsLike: 'DA SVIDANIYA',
       meaning: ['goodbye'],
     },
+    points: 0,
     categories: [Category.Greetings],
   },
   {
@@ -15,6 +16,7 @@ export const greetings: Array<Word> = [
       soundsLike: 'DAB**RO** PA**ZHA**LOVET',
       meaning: ['welcome'],
     },
+    points: 0,
     categories: [Category.Greetings],
   },
   {
@@ -23,6 +25,7 @@ export const greetings: Array<Word> = [
       soundsLike: 'DA ZAVTRA',
       meaning: ['see you tomorrow'],
     },
+    points: 0,
     categories: [Category.Greetings],
   },
   {
@@ -31,6 +34,7 @@ export const greetings: Array<Word> = [
       soundsLike: 'KAK DYELA',
       meaning: ['how are you?'],
     },
+    points: 0,
     categories: [Category.Greetings],
   },
   {
@@ -39,6 +43,7 @@ export const greetings: Array<Word> = [
       soundsLike: 'HARASHO',
       meaning: ['fine', 'ok'],
     },
+    points: 0,
     categories: [Category.Greetings],
   },
   {
@@ -47,6 +52,7 @@ export const greetings: Array<Word> = [
       soundsLike: 'SPAKOINI NOCHI',
       meaning: ['good night'],
     },
+    points: 0,
     categories: [Category.Greetings],
   },
   {
@@ -55,6 +61,7 @@ export const greetings: Array<Word> = [
       soundsLike: 'PA**KA**',
       meaning: ['bye'],
     },
+    points: 0,
     categories: [Category.Greetings],
   },
   {
@@ -63,6 +70,7 @@ export const greetings: Array<Word> = [
       soundsLike: 'PA**ZHA**LUISTA',
       meaning: ['please'],
     },
+    points: 0,
     categories: [Category.Greetings],
   },
   {
@@ -71,6 +79,7 @@ export const greetings: Array<Word> = [
       soundsLike: 'IZVINITY',
       meaning: ['excuse me', 'sorry'],
     },
+    points: 0,
     categories: [Category.Greetings],
   },
   {
@@ -79,6 +88,7 @@ export const greetings: Array<Word> = [
       soundsLike: '**PRI**VYET',
       meaning: ['hi', 'hello'],
     },
+    points: 0,
     categories: [Category.Greetings],
   },
   {
@@ -87,6 +97,7 @@ export const greetings: Array<Word> = [
       soundsLike: 'SPA**SI**BA',
       meaning: ['thank you'],
     },
+    points: 0,
     categories: [Category.Greetings],
   },
   // {
