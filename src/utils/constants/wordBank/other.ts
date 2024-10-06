@@ -557,6 +557,33 @@ export const other = [
     points: 0,
     categories: [Category.Other],
   },
+  {
+    main: {
+      spelling: 'страшно',
+      soundsLike: '**STRASH**NA',
+      meaning: ['scary'],
+    },
+    points: 0,
+    categories: [Category.Other],
+  },
+  {
+    main: {
+      spelling: 'акно',
+      soundsLike: 'AK**NO**',
+      meaning: ['window'],
+    },
+    points: 0,
+    categories: [Category.Other],
+  },
+  {
+    main: {
+      spelling: 'стул',
+      soundsLike: 'STOOL',
+      meaning: ['chair'],
+    },
+    points: 0,
+    categories: [Category.Other],
+  },
   // {
   //   main: {
   //     spelling: '',
