@@ -1,5 +1,6 @@
 import { animals } from './animals';
 import { bodyRelation } from './bodyRelation';
+import { colors } from './colors';
 import { countries } from './countries';
 import { drinks } from './drinks';
 import { food } from './food';
@@ -12,6 +13,7 @@ export const allWords = [
   ...animals,
   ...food,
   ...drinks,
+  ...colors,
   ...greetings,
   ...jobs,
   ...bodyRelation,
