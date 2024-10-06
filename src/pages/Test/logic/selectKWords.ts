@@ -16,7 +16,7 @@ const SELECTION_STRATEGIES = {
   [SelectionStrategies.EvenChance]: (props: StrategyProps) => {
     const { data } = props;
 
-    const result = getRandomObjects(data);
+    const result = getRandomObjects<Word>(data);
 
     return result;
   },
@@ -44,7 +44,7 @@ const SELECTION_STRATEGIES = {
 };
 
 type SelectKWordsProps = {
-  data: Array<any>;
+  data: Array<Word>;
   wordCount?: number;
   strategy?: SelectionStrategies;
 };

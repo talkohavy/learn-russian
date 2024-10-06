@@ -22,7 +22,21 @@ export default function TestPage() {
 
   const [answers, setAnswers] = useState<Array<string>>(() => emptyAnswers);
 
-  const handleTestClick = () => setShowResults(true);
+  const handleCheckClick = () => {
+    setShowResults(true);
+
+    randomWords.forEach(({ main }, index) => {
+      const isCorrectAnswer = main.spelling === answers[index];
+
+      if (isCorrectAnswer) {
+        allWords.forEach((currentWord) => {
+          if (currentWord.main.spelling === main.spelling) {
+            currentWord.points++;
+          }
+        });
+      }
+    });
+  };
 
   const handleNextTestClick = () => {
     setAnswers(emptyAnswers);
@@ -70,7 +84,7 @@ export default function TestPage() {
       </div>
 
       <div className='flex w-full max-w-md items-center justify-between gap-4'>
-        <Button content='Check' onClick={handleTestClick} className='h-10 w-24' />
+        <Button content='Check' onClick={handleCheckClick} className='h-10 w-24' />
 
         <Button
           content='retry'
