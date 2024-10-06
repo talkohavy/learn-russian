@@ -31,7 +31,7 @@ export const animals: Array<Word> = [
   },
   {
     main: {
-      spelling: 'сабака',
+      spelling: 'собака',
       soundsLike: 'SA**BA**KA',
       meaning: ['dog'],
     },
