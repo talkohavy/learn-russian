@@ -4,7 +4,7 @@
     "name": "types"
   },
   "index.html": {
-    "file": "main/index-l4QXzHS0.js",
+    "file": "main/index-CY2ErlqX.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -18,7 +18,7 @@
     ]
   },
   "pages/Home/index.tsx": {
-    "file": "static/js/index.DBnZLRAl.js",
+    "file": "static/js/index.wQrvKza7.js",
     "name": "index",
     "src": "pages/Home/index.tsx",
     "isDynamicEntry": true,
@@ -28,7 +28,7 @@
     ]
   },
   "pages/RedirectToHome/index.ts": {
-    "file": "static/js/index.C2W2FpN4.js",
+    "file": "static/js/index.BcyTpy_a.js",
     "name": "index",
     "src": "pages/RedirectToHome/index.ts",
     "isDynamicEntry": true,
@@ -37,7 +37,7 @@
     ]
   },
   "pages/Test/index.tsx": {
-    "file": "static/js/index.CZ6l4GzR.js",
+    "file": "static/js/index.CFxj6wvn.js",
     "name": "index",
     "src": "pages/Test/index.tsx",
     "isDynamicEntry": true,
