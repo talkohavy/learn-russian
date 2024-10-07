@@ -157,26 +157,3 @@ export class IndexedDBClient {
     });
   }
 }
-
-// Example usage
-(async () => {
-  const dbWrapper = new IndexedDBClient('myDatabase', 'myStore');
-  await dbWrapper.init();
-
-  // Create a new entry (POST)
-  const id = await dbWrapper.create({ name: 'John Doe', age: 30 });
-
-  // Read an entry by id (GET)
-  const entry = await dbWrapper.read(id);
-
-  // Read all entries (GET)
-  const allEntries = await dbWrapper.readAll();
-
-  // Update an entry (PUT)
-  await dbWrapper.update(id, { name: 'John Smith', age: 31 });
-
-  // Delete an entry (DELETE)
-  await dbWrapper.delete(id);
-
-  console.log({ entry, allEntries });
-})();
