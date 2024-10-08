@@ -7,7 +7,7 @@ import { food } from './food';
 import { greetings } from './greetings';
 import { jobs } from './jobs';
 import { other } from './other';
-import { questionWord } from './questionWord';
+import { questions } from './questions';
 
 export const allWords = [
   ...animals,
@@ -17,7 +17,7 @@ export const allWords = [
   ...greetings,
   ...jobs,
   ...bodyRelation,
-  ...questionWord,
+  ...questions,
   ...countries,
   ...other,
 ];
