@@ -1,49 +1,35 @@
 import { Category, type Word } from '@src/utils/types';
 
-export const animals: Array<Word> = [
+export const singularAnimals: Array<Word> = [
   {
-    main: {
-      spelling: 'лошадь',
-      soundsLike: '**LO**SHED',
-      meaning: ['horse'],
-    },
-    plural: {
-      spelling: 'лошади',
-      soundsLike: '**LO**SHEDI',
-      meaning: ['horses'],
-    },
+    spelling: 'лошадь',
+    soundsLike: '**LO**SHED',
+    meaning: ['horse'],
+    pluralForeignKey: 'лошади',
     points: 0,
     categories: [Category.Animals],
   },
   {
-    main: {
-      spelling: 'кошка',
-      soundsLike: '**KO**SHKA',
-      meaning: ['cat'],
-    },
-    plural: {
-      spelling: 'кошки',
-      soundsLike: '**KO**SHKI',
-      meaning: ['cats'],
-    },
+    spelling: 'кошка',
+    soundsLike: '**KO**SHKA',
+    meaning: ['cat'],
+    pluralForeignKey: 'кошки',
     points: 0,
     categories: [Category.Animals],
   },
   {
-    main: {
-      spelling: 'собака',
-      soundsLike: 'SA**BA**KA',
-      meaning: ['dog'],
-    },
+    spelling: 'собака',
+    soundsLike: 'SA**BA**KA',
+    meaning: ['dog'],
+    // pluralForeignKey: '',
     points: 0,
     categories: [Category.Animals],
   },
   {
-    main: {
-      spelling: 'орёл',
-      soundsLike: 'AR**YOL**',
-      meaning: ['eagle'],
-    },
+    spelling: 'орёл',
+    soundsLike: 'AR**YOL**',
+    meaning: ['eagle'],
+    // pluralForeignKey: '',
     points: 0,
     categories: [Category.Animals],
   },
@@ -56,3 +42,32 @@ export const animals: Array<Word> = [
   //   categories: [Category.Animals],
   // },
 ];
+
+export const pluralAnimals: Array<Word> = [
+  {
+    spelling: 'лошади',
+    soundsLike: '**LO**SHEDI',
+    meaning: ['horses'],
+    singularForeignKey: 'лошадь',
+    points: 0,
+    categories: [Category.Animals],
+  },
+  {
+    spelling: 'кошки',
+    soundsLike: '**KO**SHKI',
+    meaning: ['cats'],
+    singularForeignKey: 'кошка',
+    points: 0,
+    categories: [Category.Animals],
+  },
+  // {
+  //   main: {
+  //     spelling: '',
+  //     soundsLike: '',
+  //     meaning: [''],
+  //   },
+  //   categories: [Category.Animals],
+  // },
+];
+
+export const animals = [...singularAnimals, ...pluralAnimals];

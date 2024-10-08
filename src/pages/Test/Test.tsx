@@ -4,8 +4,14 @@ import Input from '@src/components/Input';
 import Retry from '@src/components/svgs/Retry';
 import VInCircle from '@src/components/svgs/VInCircle';
 import XMark from '@src/components/svgs/XMark';
+import { useLocalStorage } from '@src/hooks/useLocalStorage';
 import { allWords } from '@src/utils/constants/wordBank';
 import { SelectionStrategies, selectKWords } from './logic/selectKWords';
+
+type WordScore = {
+  word: string;
+  score: number;
+};
 
 const wordsInTestCount = 10;
 const emptyAnswers = Array.from(Array(wordsInTestCount)).map(() => '');
@@ -13,6 +19,13 @@ const emptyAnswers = Array.from(Array(wordsInTestCount)).map(() => '');
 export default function TestPage() {
   const [showResults, setShowResults] = useState<boolean>();
   const [shuffleValue, setShuffleValue] = useState<number>(0);
+
+  const [wordsScore, setWordsScore] = useLocalStorage<Array<WordScore>>(
+    'words',
+    allWords.map((w) => ({ word: w.main.spelling, score: 0 })),
+  );
+
+  wordsScore;
 
   const randomWords = useMemo(
     () => selectKWords({ data: allWords, strategy: SelectionStrategies.Knowledge, wordCount: wordsInTestCount }),
@@ -29,11 +42,16 @@ export default function TestPage() {
       const isCorrectAnswer = main.spelling === answers[index];
 
       if (isCorrectAnswer) {
-        allWords.forEach((currentWord) => {
-          if (currentWord.main.spelling === main.spelling) {
-            currentWord.points++;
+        const updatedWordScoresArr = wordsScore.map((wordScore) => {
+          if (wordScore.word === main.spelling) {
+            const updatedWordScore: WordScore = { word: wordScore.word, score: wordScore.score + 1 };
+            return updatedWordScore;
           }
+
+          return wordScore;
         });
+
+        setWordsScore(updatedWordScoresArr);
       }
     });
   };

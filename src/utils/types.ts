@@ -1,11 +1,5 @@
 import type { LazyExoticComponent, ReactNode } from 'react';
 
-type WordMeta = {
-  spelling: string;
-  meaning: Array<string>;
-  soundsLike: string;
-};
-
 export type Route = {
   to: string;
   text: string;
@@ -15,10 +9,13 @@ export type Route = {
 };
 
 export type Word = {
-  main: WordMeta;
-  male?: WordMeta;
-  female?: WordMeta;
-  plural?: WordMeta;
+  spelling: string;
+  meaning: Array<string>;
+  soundsLike: string;
+  singularForeignKey?: string;
+  pluralForeignKey?: string;
+  maleForeignKey?: string;
+  femaleForeignKey?: string;
   points: number;
   categories: Array<Category>;
 };
