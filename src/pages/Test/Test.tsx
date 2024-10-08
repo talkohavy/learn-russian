@@ -22,7 +22,7 @@ export default function TestPage() {
 
   const [wordsScore, setWordsScore] = useLocalStorage<Array<WordScore>>(
     'words',
-    allWords.map((w) => ({ word: w.main.spelling, score: 0 })),
+    allWords.map((w) => ({ word: w.spelling, score: 0 })),
   );
 
   wordsScore;
@@ -38,12 +38,12 @@ export default function TestPage() {
   const handleCheckClick = () => {
     setShowResults(true);
 
-    randomWords.forEach(({ main }, index) => {
-      const isCorrectAnswer = main.spelling === answers[index];
+    randomWords.forEach(({ spelling }, index) => {
+      const isCorrectAnswer = spelling === answers[index];
 
       if (isCorrectAnswer) {
         const updatedWordScoresArr = wordsScore.map((wordScore) => {
-          if (wordScore.word === main.spelling) {
+          if (wordScore.word === spelling) {
             const updatedWordScore: WordScore = { word: wordScore.word, score: wordScore.score + 1 };
             return updatedWordScore;
           }
@@ -70,12 +70,12 @@ export default function TestPage() {
   return (
     <div className='flex size-full flex-col items-center justify-center gap-10 p-6'>
       <div className='flex w-full max-w-md flex-col gap-3 rounded-md border p-4'>
-        {randomWords.map(({ main }, index) => {
-          const isCorrectAnswer = main.spelling === answers[index];
+        {randomWords.map(({ spelling, meaning }, index) => {
+          const isCorrectAnswer = spelling === answers[index];
 
           return (
             <div key={index} className='flex h-10 w-full items-center justify-between gap-10'>
-              <div>{main.meaning[0]}</div>
+              <div>{meaning[0]}</div>
 
               <div className='flex h-full items-center gap-2'>
                 <Input

@@ -32,7 +32,7 @@ const SELECTION_STRATEGIES = {
         getItemWeight: (item: any) => item.points,
       })!;
 
-      if (!selectedWords.find((word) => word.main.meaning === currentlySelectedWord?.main.meaning)) {
+      if (!selectedWords.find((word) => word.meaning === currentlySelectedWord?.meaning)) {
         selectedWords.push(currentlySelectedWord);
       } else {
         i--;

@@ -6,7 +6,7 @@ export default function Card(props: CardProps) {
   const { title } = props;
 
   return (
-    <div className='flex justify-center items-center bg-red-50 rounded-md size-40 hover:bg-red-100 cursor-pointer active:bg-red-200'>
+    <div className='flex size-40 cursor-pointer items-center justify-center rounded-md bg-red-50 hover:bg-red-100 active:bg-red-200'>
       <h2 className='font-bold'>{title}</h2>
     </div>
   );
