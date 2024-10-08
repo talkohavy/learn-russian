@@ -139,4 +139,21 @@ export class IndexedDBClient {
       request.onerror = onDeleteFailure;
     });
   }
+
+  // List all databases (Browser support may vary)
+  static async listDatabases(): Promise<IDBDatabaseInfo[]> {
+    if ('databases' in indexedDB) return indexedDB.databases();
+
+    throw new Error('The `indexedDB.databases()` API is not supported in this browser.');
+  }
+
+  // List all object stores (tables) in the current database
+  async listTables(): Promise<string[]> {
+    return new Promise((resolve, reject) => {
+      if (!this.db) return reject('Database not initialized');
+
+      const storeNames = Array.from(this.db.objectStoreNames);
+      resolve(storeNames);
+    });
+  }
 }
