@@ -18,142 +18,125 @@ export class IndexedDBClient {
 
   async init(): Promise<IDBDatabase> {
     return new Promise((resolve, reject) => {
-      const request = indexedDB.open(this.dbName, this.version);
-
-      request.onupgradeneeded = (event: IDBVersionChangeEvent) => {
+      const createTableIfDoesntExist = (event: IDBVersionChangeEvent) => {
         const db = (event.target as IDBOpenDBRequest).result;
-        if (!db.objectStoreNames.contains(this.storeName)) {
-          db.createObjectStore(this.storeName, { keyPath: 'id', autoIncrement: true });
-        }
+        const isTableAlreadyExists = db.objectStoreNames.contains(this.storeName);
+
+        if (isTableAlreadyExists) return;
+
+        db.createObjectStore(this.storeName, { keyPath: 'id', autoIncrement: true });
       };
 
-      request.onsuccess = (event: Event) => {
+      const returnDbOnSuccess = (event: Event) => {
         this.db = (event.target as IDBOpenDBRequest).result;
         resolve(this.db);
       };
 
-      request.onerror = (event: Event) => {
-        reject(`Failed to open database: ${(event.target as IDBOpenDBRequest).error}`);
+      const handleInitError = (event: Event) => {
+        const { error } = event.target as IDBOpenDBRequest;
+        reject(`Failed to open database: ${error}`);
       };
+
+      const request = indexedDB.open(this.dbName, this.version);
+
+      request.onupgradeneeded = createTableIfDoesntExist;
+      request.onsuccess = returnDbOnSuccess;
+      request.onerror = handleInitError;
     });
   }
 
-  // RESTful Create (POST)
   async create(data: IDBData): Promise<number> {
     return new Promise((resolve, reject) => {
-      if (!this.db) {
-        reject('Database not initialized');
-        return;
-      }
+      const onCreateSuccess = () => resolve(request.result as number);
+      const onCreateFailure = (event: Event) => reject(`Create failed: ${(event.target as IDBRequest).error}`);
+
+      if (!this.db) return reject('Database not initialized');
 
       const transaction = this.db.transaction([this.storeName], 'readwrite');
       const store = transaction.objectStore(this.storeName);
-
       const request = store.add(data);
 
-      request.onsuccess = () => {
-        resolve(request.result as number); // Return the ID of the new entry
-      };
-
-      request.onerror = (event: Event) => {
-        reject(`Create failed: ${(event.target as IDBRequest).error}`);
-      };
+      // Return the ID of the new entry
+      request.onsuccess = onCreateSuccess;
+      request.onerror = onCreateFailure;
     });
   }
 
-  // RESTful Read (GET)
   async read(id: number): Promise<IDBData> {
     return new Promise((resolve, reject) => {
-      if (!this.db) {
-        reject('Database not initialized');
-        return;
-      }
+      const onReadSuccess = () => {
+        if (request.result) return resolve(request.result as IDBData);
+
+        return reject(`Item with id ${id} not found.`);
+      };
+
+      const onReadFailure = (event: Event) => reject(`Read failed: ${(event.target as IDBRequest).error}`);
+
+      if (!this.db) return reject('Database not initialized');
 
       const transaction = this.db.transaction([this.storeName], 'readonly');
       const store = transaction.objectStore(this.storeName);
-
       const request = store.get(id);
 
-      request.onsuccess = () => {
-        if (request.result) {
-          resolve(request.result as IDBData);
-        } else {
-          reject(`Item with id ${id} not found.`);
-        }
-      };
-
-      request.onerror = (event: Event) => {
-        reject(`Read failed: ${(event.target as IDBRequest).error}`);
-      };
+      request.onsuccess = onReadSuccess;
+      request.onerror = onReadFailure;
     });
   }
 
-  // RESTful Read All (GET)
   async readAll(): Promise<IDBData[]> {
     return new Promise((resolve, reject) => {
-      if (!this.db) {
-        reject('Database not initialized');
-        return;
-      }
+      const onReadSuccess = () => resolve(request.result as IDBData[]);
+      const onReadFailure = (event: Event) => {
+        const { error } = event.target as IDBRequest;
+        reject(`Read all failed: ${error}`);
+      };
+
+      if (!this.db) return reject('Database not initialized');
 
       const transaction = this.db.transaction([this.storeName], 'readonly');
       const store = transaction.objectStore(this.storeName);
-
       const request = store.getAll();
 
-      request.onsuccess = () => {
-        resolve(request.result as IDBData[]);
-      };
-
-      request.onerror = (event: Event) => {
-        reject(`Read all failed: ${(event.target as IDBRequest).error}`);
-      };
+      request.onsuccess = onReadSuccess;
+      request.onerror = onReadFailure;
     });
   }
 
-  // RESTful Update (PUT)
   async update(id: number, updatedData: IDBData): Promise<string> {
     return new Promise((resolve, reject) => {
-      if (!this.db) {
-        reject('Database not initialized');
-        return;
-      }
+      const onUpdateSuccess = () => resolve(`Item with id ${id} updated.`);
+      const onUpdateFailure = (event: Event) => {
+        const { error } = event.target as IDBRequest;
+        reject(`Update failed: ${error}`);
+      };
+
+      if (!this.db) return reject('Database not initialized');
 
       const transaction = this.db.transaction([this.storeName], 'readwrite');
       const store = transaction.objectStore(this.storeName);
-
       const request = store.put({ ...updatedData, id });
 
-      request.onsuccess = () => {
-        resolve(`Item with id ${id} updated.`);
-      };
-
-      request.onerror = (event: Event) => {
-        reject(`Update failed: ${(event.target as IDBRequest).error}`);
-      };
+      request.onsuccess = onUpdateSuccess;
+      request.onerror = onUpdateFailure;
     });
   }
 
-  // RESTful Delete (DELETE)
   async delete(id: number): Promise<string> {
     return new Promise((resolve, reject) => {
-      if (!this.db) {
-        reject('Database not initialized');
-        return;
-      }
+      const onDeleteSuccess = () => resolve(`Item with id ${id} deleted.`);
+      const onDeleteFailure = (event: Event) => {
+        const { error } = event.target as IDBRequest;
+        reject(`Delete failed: ${error}`);
+      };
+
+      if (!this.db) return reject('Database not initialized');
 
       const transaction = this.db.transaction([this.storeName], 'readwrite');
       const store = transaction.objectStore(this.storeName);
-
       const request = store.delete(id);
 
-      request.onsuccess = () => {
-        resolve(`Item with id ${id} deleted.`);
-      };
-
-      request.onerror = (event: Event) => {
-        reject(`Delete failed: ${(event.target as IDBRequest).error}`);
-      };
+      request.onsuccess = onDeleteSuccess;
+      request.onerror = onDeleteFailure;
     });
   }
 }
