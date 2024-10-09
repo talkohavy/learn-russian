@@ -1,3 +1,5 @@
+export const MAX_WEIGHT = 100;
+
 export * from './db';
 export * from './localStorageKeys';
 
