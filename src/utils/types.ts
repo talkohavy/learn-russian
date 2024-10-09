@@ -9,6 +9,7 @@ export type Route = {
 };
 
 export type Word = {
+  id?: number;
   spelling: string;
   meaning: Array<string>;
   soundsLike: string;
