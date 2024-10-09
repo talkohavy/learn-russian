@@ -94,6 +94,32 @@ export class IndexedDBClient {
     });
   }
 
+  async getWords(query: Partial<IDBData>): Promise<IDBData[]> {
+    return new Promise((resolve, reject) => {
+      if (!this.db) return reject('Database not initialized');
+
+      const transaction = this.db.transaction([this.tableName], 'readonly');
+      const store = transaction.objectStore(this.tableName);
+
+      const request = store.getAll();
+
+      request.onsuccess = () => {
+        const result = request.result as IDBData[];
+        // Filter results based on the query parameters
+        const filteredResults = result.filter((item) =>
+          // Ensure the query's key exists and matches the value
+          Object.keys(query).every((key) => query[key as keyof IDBData] === item[key as keyof IDBData]),
+        );
+
+        resolve(filteredResults);
+      };
+
+      request.onerror = (event: Event) => {
+        reject(`Find query failed: ${(event.target as IDBRequest).error}`);
+      };
+    });
+  }
+
   async readAll(): Promise<IDBData[]> {
     return new Promise((resolve, reject) => {
       const onReadSuccess = () => resolve(request.result as IDBData[]);
