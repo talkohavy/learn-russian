@@ -1,3 +1,5 @@
+import { allWords } from '@src/utils/constants/wordBank';
+
 interface IDBData {
   id?: number; // id is optional since it will be auto-generated
   [key: string]: any; // Additional properties
@@ -5,13 +7,13 @@ interface IDBData {
 
 export class IndexedDBClient {
   private dbName: string;
-  private storeName: string;
+  private tableName: string;
   private version: number;
   private db: IDBDatabase | null;
 
-  constructor(dbName: string, storeName: string, version = 1) {
+  constructor(dbName: string, tableName: string, version = 1) {
     this.dbName = dbName;
-    this.storeName = storeName;
+    this.tableName = tableName;
     this.version = version;
     this.db = null;
   }
@@ -20,11 +22,20 @@ export class IndexedDBClient {
     return new Promise((resolve, reject) => {
       const createTableIfDoesntExist = (event: IDBVersionChangeEvent) => {
         const db = (event.target as IDBOpenDBRequest).result;
-        const isTableAlreadyExists = db.objectStoreNames.contains(this.storeName);
+
+        const isTableAlreadyExists = db.objectStoreNames.contains(this.tableName);
 
         if (isTableAlreadyExists) return;
 
-        db.createObjectStore(this.storeName, { keyPath: 'id', autoIncrement: true });
+        const table = db.createObjectStore(this.tableName, { keyPath: 'id', autoIncrement: true });
+
+        // Populate with initial data:
+        table.transaction.oncomplete = () => {
+          const transaction = db.transaction(this.tableName, 'readwrite');
+          const objectStore = transaction.objectStore(this.tableName);
+
+          allWords.forEach((item) => objectStore.add(item));
+        };
       };
 
       const returnDbOnSuccess = (event: Event) => {
@@ -52,8 +63,8 @@ export class IndexedDBClient {
 
       if (!this.db) return reject('Database not initialized');
 
-      const transaction = this.db.transaction([this.storeName], 'readwrite');
-      const store = transaction.objectStore(this.storeName);
+      const transaction = this.db.transaction([this.tableName], 'readwrite');
+      const store = transaction.objectStore(this.tableName);
       const request = store.add(data);
 
       // Return the ID of the new entry
@@ -74,8 +85,8 @@ export class IndexedDBClient {
 
       if (!this.db) return reject('Database not initialized');
 
-      const transaction = this.db.transaction([this.storeName], 'readonly');
-      const store = transaction.objectStore(this.storeName);
+      const transaction = this.db.transaction([this.tableName], 'readonly');
+      const store = transaction.objectStore(this.tableName);
       const request = store.get(id);
 
       request.onsuccess = onReadSuccess;
@@ -93,8 +104,8 @@ export class IndexedDBClient {
 
       if (!this.db) return reject('Database not initialized');
 
-      const transaction = this.db.transaction([this.storeName], 'readonly');
-      const store = transaction.objectStore(this.storeName);
+      const transaction = this.db.transaction([this.tableName], 'readonly');
+      const store = transaction.objectStore(this.tableName);
       const request = store.getAll();
 
       request.onsuccess = onReadSuccess;
@@ -112,8 +123,8 @@ export class IndexedDBClient {
 
       if (!this.db) return reject('Database not initialized');
 
-      const transaction = this.db.transaction([this.storeName], 'readwrite');
-      const store = transaction.objectStore(this.storeName);
+      const transaction = this.db.transaction([this.tableName], 'readwrite');
+      const store = transaction.objectStore(this.tableName);
       const request = store.put({ ...updatedData, id });
 
       request.onsuccess = onUpdateSuccess;
@@ -131,8 +142,8 @@ export class IndexedDBClient {
 
       if (!this.db) return reject('Database not initialized');
 
-      const transaction = this.db.transaction([this.storeName], 'readwrite');
-      const store = transaction.objectStore(this.storeName);
+      const transaction = this.db.transaction([this.tableName], 'readwrite');
+      const store = transaction.objectStore(this.tableName);
       const request = store.delete(id);
 
       request.onsuccess = onDeleteSuccess;
@@ -152,8 +163,8 @@ export class IndexedDBClient {
     return new Promise((resolve, reject) => {
       if (!this.db) return reject('Database not initialized');
 
-      const storeNames = Array.from(this.db.objectStoreNames);
-      resolve(storeNames);
+      const tableNames = Array.from(this.db.objectStoreNames);
+      resolve(tableNames);
     });
   }
 }
