@@ -1,36 +1,27 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Button from '@src/components/Button';
 import Input from '@src/components/Input';
 import Retry from '@src/components/svgs/Retry';
 import VInCircle from '@src/components/svgs/VInCircle';
 import XMark from '@src/components/svgs/XMark';
-import { useLocalStorage } from '@src/hooks/useLocalStorage';
-import { allWords } from '@src/utils/constants/wordBank';
+import { indexDBClient } from '@src/main';
+import { MAX_WEIGHT } from '@src/utils/constants';
+import type { Word } from '@src/utils/types';
 import { SelectionStrategies, selectKWords } from './logic/selectKWords';
-
-type WordScore = {
-  word: string;
-  score: number;
-};
 
 const wordsInTestCount = 10;
 const emptyAnswers = Array.from(Array(wordsInTestCount)).map(() => '');
 
 export default function TestPage() {
+  const [allWords, setAllWords] = useState<Array<Word>>([]);
   const [showResults, setShowResults] = useState<boolean>();
-  const [shuffleValue, setShuffleValue] = useState<number>(0);
 
-  const [wordsScore, setWordsScore] = useLocalStorage<Array<WordScore>>(
-    'words',
-    allWords.map((w) => ({ word: w.spelling, score: 0 })),
-  );
-
-  wordsScore;
+  const [wordsWithUpdatedScore, setWordsWithUpdatedScore] = useState<Array<Word>>([]);
 
   const randomWords = useMemo(
     () => selectKWords({ data: allWords, strategy: SelectionStrategies.Knowledge, wordCount: wordsInTestCount }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [shuffleValue],
+    [allWords],
   );
 
   const [answers, setAnswers] = useState<Array<string>>(() => emptyAnswers);
@@ -38,34 +29,57 @@ export default function TestPage() {
   const handleCheckClick = () => {
     setShowResults(true);
 
-    randomWords.forEach(({ spelling }, index) => {
+    const wordsToUpdateArr: Array<Word> = [];
+
+    randomWords.forEach((randomWord, index) => {
+      const { id, spelling } = randomWord;
+
       const isCorrectAnswer = spelling === answers[index];
 
-      if (isCorrectAnswer) {
-        const updatedWordScoresArr = wordsScore.map((wordScore) => {
-          if (wordScore.word === spelling) {
-            const updatedWordScore: WordScore = { word: wordScore.word, score: wordScore.score + 1 };
-            return updatedWordScore;
-          }
+      if (!isCorrectAnswer) return;
 
-          return wordScore;
-        });
+      const wordWithUpdatedScore: Word = { ...randomWord, points: Math.min(randomWord.points + 1, MAX_WEIGHT) };
 
-        setWordsScore(updatedWordScoresArr);
-      }
+      // 1. This is for updating the in memory allWords
+      wordsToUpdateArr.push(wordWithUpdatedScore);
+
+      // 2. This is for updating the Database
+      // NOTE! The update will only be relevant on page load!
+      indexDBClient.update(id!, wordWithUpdatedScore);
     });
+
+    setWordsWithUpdatedScore(wordsToUpdateArr);
   };
+
+  useEffect(() => {
+    async function fetchAllWords() {
+      const fetchedWords = (await indexDBClient.readAll()) as Array<Word>;
+
+      setAllWords(fetchedWords);
+    }
+
+    fetchAllWords();
+  }, []);
 
   const handleNextTestClick = () => {
     setAnswers(emptyAnswers);
     setShowResults(false);
-    setShuffleValue((prev) => prev + (1 % 3));
+
+    setAllWords((prevAllWords) =>
+      prevAllWords.map((prevWord) => {
+        const wordWithUpdatedScore = wordsWithUpdatedScore.find((w) => w.id === prevWord.id);
+
+        return wordWithUpdatedScore ?? prevWord;
+      }),
+    );
   };
 
   const handleRetryTestClick = () => {
     setAnswers(emptyAnswers);
     setShowResults(false);
   };
+
+  if (!allWords.length) return <div>Loading...</div>;
 
   return (
     <div className='flex size-full flex-col items-center justify-center gap-10 p-6'>
