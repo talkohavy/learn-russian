@@ -4,6 +4,7 @@ import type { Route } from './utils/types';
 
 const HomePage = lazy(() => import('./pages/Home'));
 const TestPage = lazy(() => import('./pages/Test'));
+const AddNewWordPage = lazy(() => import('./pages/AddWordPage'));
 const RedirectToHome = lazy(() => import('./pages/RedirectToHome'));
 
 export const routes: Array<Route> = [
@@ -23,5 +24,11 @@ export const routes: Array<Route> = [
     text: 'Test me',
     activeNames: ['/test-me'],
     Component: TestPage,
+  },
+  {
+    to: `${BASE_URL}/add-word`,
+    text: 'Add word',
+    activeNames: ['/add-word'],
+    Component: AddNewWordPage,
   },
 ];
