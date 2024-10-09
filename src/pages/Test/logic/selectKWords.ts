@@ -1,3 +1,4 @@
+import { MAX_WEIGHT } from '@src/utils/constants';
 import { getRandomObjects } from '@src/utils/getRandomObjects';
 import { selectWeightedItem } from '@src/utils/selectWeightedItem';
 import type { Word } from '@src/utils/types';
@@ -8,7 +9,7 @@ export enum SelectionStrategies {
 }
 
 type StrategyProps = {
-  data: Array<any>;
+  data: Array<Word>;
   wordCount: number;
 };
 
@@ -23,12 +24,14 @@ const SELECTION_STRATEGIES = {
   [SelectionStrategies.Knowledge]: (props: StrategyProps) => {
     const { data, wordCount } = props;
 
+    if (data.length <= wordCount) return data;
+
     const selectedWords: Array<Word> = [];
 
     for (let i = 0; i < wordCount; i++) {
       const currentlySelectedWord = selectWeightedItem<Word>({
         data,
-        maxWeight: 20,
+        maxWeight: MAX_WEIGHT,
         getItemWeight: (item: any) => item.points,
       })!;
 
