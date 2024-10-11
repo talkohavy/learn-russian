@@ -95,7 +95,7 @@ export const other: Array<Word> = [
   },
   {
     spelling: 'мужчины',
-    soundsLike: 'MUI**SHI**NI',
+    soundsLike: 'MUZH**CHI**NI',
     meaning: ['men'],
     singularForeignKey: 'мужчина',
     points: 0,
