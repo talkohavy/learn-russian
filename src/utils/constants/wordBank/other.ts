@@ -5,7 +5,6 @@ export const other: Array<Word> = [
     spelling: 'друг',
     soundsLike: 'DROOG',
     meaning: ['friend'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -13,7 +12,6 @@ export const other: Array<Word> = [
     spelling: 'здесь',
     soundsLike: 'ZDIS',
     meaning: ['here'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -21,7 +19,6 @@ export const other: Array<Word> = [
     spelling: 'там',
     soundsLike: 'TAM',
     meaning: ['there'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -30,7 +27,6 @@ export const other: Array<Word> = [
     soundsLike: 'ETA', // ETAT ETI
     meaning: ['this'],
     // metadata: ['етот', 'эти']
-
     points: 0,
     categories: [Category.Other],
   },
@@ -38,7 +34,6 @@ export const other: Array<Word> = [
     spelling: 'тарелка',
     soundsLike: 'TAREILKA',
     meaning: ['plate'],
-
     pluralForeignKey: 'тарелки',
     points: 0,
     categories: [Category.Other],
@@ -48,7 +43,6 @@ export const other: Array<Word> = [
     soundsLike: 'TAREILKI',
     meaning: ['plates'],
     singularForeignKey: 'тарелка',
-
     points: 0,
     categories: [Category.Other],
   },
@@ -88,7 +82,6 @@ export const other: Array<Word> = [
     spelling: 'дети',
     soundsLike: '**DEY**TI',
     meaning: ['children'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -112,7 +105,6 @@ export const other: Array<Word> = [
     spelling: 'женщина',
     soundsLike: '**ZHEN**SHINA',
     meaning: ['woman'],
-
     pluralForeignKey: 'женщины',
     points: 0,
     categories: [Category.Other],
@@ -129,7 +121,6 @@ export const other: Array<Word> = [
     spelling: 'дом',
     soundsLike: 'DOM',
     meaning: ['house'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -137,7 +128,6 @@ export const other: Array<Word> = [
     spelling: 'офис',
     soundsLike: '**O**FIS',
     meaning: ['office'],
-
     pluralForeignKey: 'офисы',
     points: 0,
     categories: [Category.Other],
@@ -154,7 +144,6 @@ export const other: Array<Word> = [
     spelling: 'метро',
     soundsLike: 'MET**RO**',
     meaning: ['subway'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -162,7 +151,6 @@ export const other: Array<Word> = [
     spelling: 'человек',
     soundsLike: 'CHELA**VEK**',
     meaning: ['person'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -186,7 +174,15 @@ export const other: Array<Word> = [
     spelling: 'тетрадь',
     soundsLike: 'TET**RAD**',
     meaning: ['notebook'],
-
+    pluralForeignKey: 'тетради',
+    points: 0,
+    categories: [Category.Other],
+  },
+  {
+    spelling: 'тетради',
+    soundsLike: 'TET**RA**DI',
+    meaning: ['notebooks'],
+    singularForeignKey: 'тетрадь',
     points: 0,
     categories: [Category.Other],
   },
@@ -226,7 +222,6 @@ export const other: Array<Word> = [
     spelling: 'телефон',
     soundsLike: 'TYELEPHON',
     meaning: ['phone'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -234,7 +229,6 @@ export const other: Array<Word> = [
     spelling: 'такси',
     soundsLike: 'TAKSI',
     meaning: ['taxi'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -242,7 +236,6 @@ export const other: Array<Word> = [
     spelling: 'план',
     soundsLike: 'PLAN',
     meaning: ['plan'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -250,7 +243,6 @@ export const other: Array<Word> = [
     spelling: 'ребёнок',
     soundsLike: 'REB**YO**NAK',
     meaning: ['child', 'baby'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -258,7 +250,6 @@ export const other: Array<Word> = [
     spelling: 'велосипед',
     soundsLike: 'VELOSIP**YED**',
     meaning: ['bicycle'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -266,7 +257,6 @@ export const other: Array<Word> = [
     spelling: 'ну',
     soundsLike: 'NU',
     meaning: ['well'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -274,7 +264,6 @@ export const other: Array<Word> = [
     spelling: 'всё',
     soundsLike: 'VSO',
     meaning: ['everything', 'all', 'anything'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -282,7 +271,6 @@ export const other: Array<Word> = [
     spelling: 'уже',
     soundsLike: 'UZHE',
     meaning: ['already'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -290,7 +278,6 @@ export const other: Array<Word> = [
     spelling: 'конечно',
     soundsLike: 'KANI**YECH**NA',
     meaning: ['of course'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -298,7 +285,6 @@ export const other: Array<Word> = [
     spelling: 'утро',
     soundsLike: 'UTRA',
     meaning: ['morning'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -315,7 +301,6 @@ export const other: Array<Word> = [
     spelling: 'парк',
     soundsLike: 'PARK',
     meaning: ['park'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -323,7 +308,6 @@ export const other: Array<Word> = [
     spelling: 'добрый',
     soundsLike: 'DOBREY',
     meaning: ['good', 'kind', 'nice'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -331,7 +315,6 @@ export const other: Array<Word> = [
     spelling: 'дела',
     soundsLike: 'DYELA',
     meaning: ['matter', 'business', 'case'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -339,7 +322,6 @@ export const other: Array<Word> = [
     spelling: 'день',
     soundsLike: 'DYЕN',
     meaning: ['day'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -347,7 +329,6 @@ export const other: Array<Word> = [
     spelling: 'вечер',
     soundsLike: '**VYE**CHER',
     meaning: ['evening'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -355,7 +336,6 @@ export const other: Array<Word> = [
     spelling: 'город',
     soundsLike: '**GO**RAD',
     meaning: ['city'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -363,7 +343,6 @@ export const other: Array<Word> = [
     spelling: 'свитер',
     soundsLike: '**SVI**TER',
     meaning: ['Sweater'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -371,7 +350,6 @@ export const other: Array<Word> = [
     spelling: 'или',
     soundsLike: '**I**LI',
     meaning: ['or'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -379,7 +357,6 @@ export const other: Array<Word> = [
     spelling: 'рюкзак',
     soundsLike: '**RIU**KZAK',
     meaning: ['backpack'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -387,7 +364,6 @@ export const other: Array<Word> = [
     spelling: 'да',
     soundsLike: 'DA',
     meaning: ['yes'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -395,7 +371,6 @@ export const other: Array<Word> = [
     spelling: 'нет',
     soundsLike: 'NYET',
     meaning: ['no'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -403,7 +378,6 @@ export const other: Array<Word> = [
     spelling: 'меню',
     soundsLike: 'MENU',
     meaning: ['menu'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -411,7 +385,6 @@ export const other: Array<Word> = [
     spelling: 'сон',
     soundsLike: 'SON',
     meaning: ['dream'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -419,7 +392,6 @@ export const other: Array<Word> = [
     spelling: 'маленький',
     soundsLike: 'MALYENKI',
     meaning: ['small'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -427,7 +399,6 @@ export const other: Array<Word> = [
     spelling: 'жаль',
     soundsLike: 'ZHAL',
     meaning: ['what a pity', 'it is a pitty', 'sorry'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -435,7 +406,6 @@ export const other: Array<Word> = [
     spelling: 'йога',
     soundsLike: 'YOGA',
     meaning: ['yoga'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -443,7 +413,6 @@ export const other: Array<Word> = [
     spelling: 'шорты',
     soundsLike: 'SHORTI',
     meaning: ['shorts'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -451,7 +420,6 @@ export const other: Array<Word> = [
     spelling: 'кровать',
     soundsLike: 'KRA**VAT**',
     meaning: ['bed'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -459,7 +427,6 @@ export const other: Array<Word> = [
     spelling: 'тоже',
     soundsLike: '**TO**ZHE',
     meaning: ['also', 'too'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -467,7 +434,6 @@ export const other: Array<Word> = [
     spelling: 'туалет',
     soundsLike: '**TU**ALET',
     meaning: ['toilet', 'bathroom'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -475,7 +441,6 @@ export const other: Array<Word> = [
     spelling: 'камень',
     soundsLike: '**KA**MYEN',
     meaning: ['stone'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -499,7 +464,6 @@ export const other: Array<Word> = [
     spelling: 'карандаш',
     soundsLike: 'KARAN**DASH**',
     meaning: ['pencil'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -507,7 +471,6 @@ export const other: Array<Word> = [
     spelling: 'дерево',
     soundsLike: 'DYEREVA',
     meaning: ['tree'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -515,7 +478,6 @@ export const other: Array<Word> = [
     spelling: 'далеко',
     soundsLike: 'DALIE**KO**',
     meaning: ['far away'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -523,7 +485,6 @@ export const other: Array<Word> = [
     spelling: 'площадь',
     soundsLike: '**PLO**SHID',
     meaning: ['square (place)'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -531,7 +492,6 @@ export const other: Array<Word> = [
     spelling: 'на',
     soundsLike: 'NA',
     meaning: ['on', 'is on', 'there is...on'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -539,7 +499,6 @@ export const other: Array<Word> = [
     spelling: 'страшно',
     soundsLike: '**STRASH**NA',
     meaning: ['scary'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -547,7 +506,6 @@ export const other: Array<Word> = [
     spelling: 'акно',
     soundsLike: 'AK**NO**',
     meaning: ['window'],
-
     points: 0,
     categories: [Category.Other],
   },
@@ -555,7 +513,6 @@ export const other: Array<Word> = [
     spelling: 'стул',
     soundsLike: 'STOOL',
     meaning: ['chair'],
-
     points: 0,
     categories: [Category.Other],
   },
