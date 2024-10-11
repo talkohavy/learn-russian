@@ -38,7 +38,7 @@ export const questions: Array<Word> = [
   },
   {
     spelling: 'почему',
-    soundsLike: 'PACHIMU',
+    soundsLike: 'PACHYEMU',
     meaning: ['why'],
     points: 0,
     categories: [Category.QuestionWord],
