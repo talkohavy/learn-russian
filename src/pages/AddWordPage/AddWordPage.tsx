@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import Button from '@src/components/Button';
+import DisappearingMessage from '@src/components/DisappearingMessage';
 import Input from '@src/components/Input';
 import { indexDBClient } from '@src/main';
 
 export default function AddWordPage() {
+  const [savedValue, setSavedValue] = useState<number | null>(null);
   const [spelling, setSpelling] = useState('');
   const [meaning, setMeaning] = useState<string>('');
   const [soundsLike, setSoundsLike] = useState<string>('');
@@ -28,6 +30,8 @@ export default function AddWordPage() {
     if (isWordAlreadyExists) return console.error('WORD ALREADY EXISTS!');
 
     await indexDBClient.create(newWord);
+
+    setSavedValue(Math.floor(Math.random() * 1000));
   };
 
   return (
@@ -65,6 +69,10 @@ export default function AddWordPage() {
           <Input value={categories} setValue={setCategories} />
         </div>
       </div>
+
+      <DisappearingMessage value={savedValue} className='flex items-center justify-center'>
+        <div className='h-full text-lg text-green-400'>Word added successfully!</div>
+      </DisappearingMessage>
 
       <Button content='Add new word' disabled={isDisabled} onClick={handleAddNewWordClick} />
     </div>
