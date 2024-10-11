@@ -100,7 +100,7 @@ export default function EditWordPage() {
       </div>
 
       <DisappearingMessage value={savedValue} className='flex items-center justify-center'>
-        <div className='h-full'>Word edited successfully!</div>
+        <div className='h-full text-lg text-green-400'>Word edited successfully!</div>
       </DisappearingMessage>
 
       <Button content='Edit word' disabled={isDisabled} onClick={handleEditWordClick} />
