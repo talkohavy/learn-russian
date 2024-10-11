@@ -1,13 +1,13 @@
 {
-  "_Input.yNFD8ARJ.js": {
-    "file": "static/js/Input.yNFD8ARJ.js",
+  "_Input.BTpFk_xR.js": {
+    "file": "static/js/Input.BTpFk_xR.js",
     "name": "Input",
     "imports": [
       "index.html"
     ]
   },
   "index.html": {
-    "file": "main/index-lx7SLu_J.js",
+    "file": "main/index-BM85O6dS.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -15,24 +15,35 @@
       "pages/Home/index.tsx",
       "pages/Test/index.tsx",
       "pages/AddWordPage/index.ts",
+      "pages/EditWordPage/index.ts",
       "pages/RedirectToHome/index.ts"
     ],
     "css": [
-      "static/css/index.BsVfNeOIla7p.css"
+      "static/css/index.DgDo4UXTJBe-.css"
     ]
   },
   "pages/AddWordPage/index.ts": {
-    "file": "static/js/index.Bmv58ZVB.js",
+    "file": "static/js/index.BPZJqOHH.js",
     "name": "index",
     "src": "pages/AddWordPage/index.ts",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_Input.yNFD8ARJ.js"
+      "_Input.BTpFk_xR.js"
+    ]
+  },
+  "pages/EditWordPage/index.ts": {
+    "file": "static/js/index.C1KcNhCi.js",
+    "name": "index",
+    "src": "pages/EditWordPage/index.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_Input.BTpFk_xR.js"
     ]
   },
   "pages/Home/index.tsx": {
-    "file": "static/js/index.DJF-_3Mx.js",
+    "file": "static/js/index.tRu4nAvf.js",
     "name": "index",
     "src": "pages/Home/index.tsx",
     "isDynamicEntry": true,
@@ -41,7 +52,7 @@
     ]
   },
   "pages/RedirectToHome/index.ts": {
-    "file": "static/js/index.BsMlxqP1.js",
+    "file": "static/js/index.D_aInjRa.js",
     "name": "index",
     "src": "pages/RedirectToHome/index.ts",
     "isDynamicEntry": true,
@@ -50,13 +61,13 @@
     ]
   },
   "pages/Test/index.tsx": {
-    "file": "static/js/index.gdMtgbff.js",
+    "file": "static/js/index.BLO7PnbO.js",
     "name": "index",
     "src": "pages/Test/index.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_Input.yNFD8ARJ.js"
+      "_Input.BTpFk_xR.js"
     ]
   }
 }
