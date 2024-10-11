@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Button from '@src/components/Button';
+import DisappearingMessage from '@src/components/DisappearingMessage';
 import Input from '@src/components/Input';
 import Select from '@src/components/Select';
 import { indexDBClient } from '@src/main';
@@ -8,6 +9,7 @@ import type { Category, Word } from '@src/utils/types';
 const defaultOption = { value: -1, label: '---', word: {} as Word };
 
 export default function EditWordPage() {
+  const [savedValue, setSavedValue] = useState<number | null>(null);
   const [selectedWord, setSelectedWord] = useState(() => defaultOption);
   const [wordOptions, setWordOptions] = useState<Array<{ value: number | string; label: string; word: Word }>>([]);
   const [spelling, setSpelling] = useState('');
@@ -55,6 +57,8 @@ export default function EditWordPage() {
     };
 
     await indexDBClient.update(updatedWord.id!, updatedWord);
+
+    setSavedValue(Math.floor(Math.random() * 1000));
   };
 
   return (
@@ -63,7 +67,7 @@ export default function EditWordPage() {
 
       <Select selectedOption={selectedWord} setOption={setSelectedWord} options={wordOptions} />
 
-      <div className='flex flex-col items-start justify-start gap-6'>
+      <div className='flex flex-col items-start justify-start gap-6 overflow-auto'>
         <div>
           <div>Spelling:</div>
           <Input value={spelling} setValue={setSpelling} />
@@ -94,6 +98,10 @@ export default function EditWordPage() {
           <Input value={categories} setValue={setCategories} />
         </div>
       </div>
+
+      <DisappearingMessage value={savedValue} className='flex items-center justify-center'>
+        <div className='h-full'>Word edited successfully!</div>
+      </DisappearingMessage>
 
       <Button content='Edit word' disabled={isDisabled} onClick={handleEditWordClick} />
     </div>
