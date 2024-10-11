@@ -481,7 +481,7 @@ export const other: Array<Word> = [
   },
   {
     spelling: 'дверь',
-    soundsLike: 'DVIR',
+    soundsLike: 'DVYER',
     meaning: ['door'],
     pluralForeignKey: 'двери',
     points: 0,
