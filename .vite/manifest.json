@@ -1,34 +1,47 @@
 {
-  "_types.CasiXT6B.js": {
-    "file": "static/js/types.CasiXT6B.js",
-    "name": "types"
+  "_Input.yNFD8ARJ.js": {
+    "file": "static/js/Input.yNFD8ARJ.js",
+    "name": "Input",
+    "imports": [
+      "index.html"
+    ]
   },
   "index.html": {
-    "file": "main/index-DnoMDbMV.js",
+    "file": "main/index-lx7SLu_J.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
       "pages/Home/index.tsx",
       "pages/Test/index.tsx",
+      "pages/AddWordPage/index.ts",
       "pages/RedirectToHome/index.ts"
     ],
     "css": [
-      "static/css/index.U1H-ZnFapv0d.css"
+      "static/css/index.BsVfNeOIla7p.css"
+    ]
+  },
+  "pages/AddWordPage/index.ts": {
+    "file": "static/js/index.Bmv58ZVB.js",
+    "name": "index",
+    "src": "pages/AddWordPage/index.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_Input.yNFD8ARJ.js"
     ]
   },
   "pages/Home/index.tsx": {
-    "file": "static/js/index.IFGuhqVo.js",
+    "file": "static/js/index.DJF-_3Mx.js",
     "name": "index",
     "src": "pages/Home/index.tsx",
     "isDynamicEntry": true,
     "imports": [
-      "index.html",
-      "_types.CasiXT6B.js"
+      "index.html"
     ]
   },
   "pages/RedirectToHome/index.ts": {
-    "file": "static/js/index.CrbKmE1I.js",
+    "file": "static/js/index.BsMlxqP1.js",
     "name": "index",
     "src": "pages/RedirectToHome/index.ts",
     "isDynamicEntry": true,
@@ -37,13 +50,13 @@
     ]
   },
   "pages/Test/index.tsx": {
-    "file": "static/js/index.CVVgfjmp.js",
+    "file": "static/js/index.gdMtgbff.js",
     "name": "index",
     "src": "pages/Test/index.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_types.CasiXT6B.js"
+      "_Input.yNFD8ARJ.js"
     ]
   }
 }
