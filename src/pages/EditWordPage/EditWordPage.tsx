@@ -34,7 +34,9 @@ export default function EditWordPage() {
     async function fetchWordOptions() {
       const allWords = (await indexDBClient.readAll()) as Array<Word>;
 
-      const wordOptions = allWords.map((word, index) => ({ value: index, label: word.meaning[0]!, word }));
+      const allWordSorted = allWords.sort((a, b) => a.meaning[0]!.localeCompare(b.meaning[0]!));
+
+      const wordOptions = allWordSorted.map((word, index) => ({ value: index, label: word.meaning[0]!, word }));
       wordOptions.unshift(defaultOption);
 
       setWordOptions(wordOptions);
