@@ -84,12 +84,12 @@ export default function TestPage() {
   return (
     <div className='flex size-full flex-col items-center justify-center gap-10 p-6'>
       <div className='flex w-full max-w-md flex-col gap-3 rounded-md border p-4'>
-        {randomWords.map(({ spelling, meaning }, index) => {
+        {randomWords.map(({ spelling, meaning, soundsLike }, index) => {
           const isCorrectAnswer = spelling === answers[index];
 
           return (
             <div key={index} className='flex h-10 w-full items-center justify-between gap-10'>
-              <div>{meaning[0]}</div>
+              <div title={soundsLike}>{meaning[0]}</div>
 
               <div className='flex h-full items-center gap-2'>
                 <Input
@@ -102,9 +102,9 @@ export default function TestPage() {
                   {showResults && (
                     <div className='flex h-full items-center justify-center'>
                       {isCorrectAnswer ? (
-                        <VInCircle className='h-1/2' borderColor='#19d23a' color='#19d23a' />
+                        <VInCircle className='h-1/2' borderColor='#19d23a' color='#19d23a' title={spelling} />
                       ) : (
-                        <XMark className='h-1/2 stroke-red-500' />
+                        <XMark className='h-1/2 stroke-red-500' title={spelling} />
                       )}
                     </div>
                   )}
