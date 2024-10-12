@@ -25,13 +25,16 @@ export default function AddWordPage() {
   }, [setSpelling, setMeaning, setSoundsLike, setPluralForeignKey, setSingularForeignKey, setCategories]);
 
   const handleAddNewWordClick = async () => {
+    const meaningArr = meaning.split(',').map((item) => item.trim());
+    const categoriesArr = categories.split(',').map((item) => item.trim());
+
     const newWord = {
       spelling,
-      meaning,
+      meaning: meaningArr,
       soundsLike,
       pluralForeignKey,
       singularForeignKey,
-      categories,
+      categories: categoriesArr,
     };
 
     const isWordAlreadyExists = (await indexDBClient.getWords({ spelling })).length;
