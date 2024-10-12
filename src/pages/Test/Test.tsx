@@ -79,7 +79,7 @@ export default function TestPage() {
     setShowResults(false);
   };
 
-  if (!allWords.length) return <div>Loading...</div>;
+  if (!allWords.length) return null;
 
   return (
     <div className='flex size-full flex-col items-center justify-center gap-10 p-6'>
