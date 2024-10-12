@@ -13,7 +13,7 @@ export type Word = {
   spelling: string;
   meaning: Array<string>;
   soundsLike: string;
-  singularForeignKey?: string;
+  singularForeignKey?: string | null;
   pluralForeignKey?: string;
   maleForeignKey?: string;
   femaleForeignKey?: string;
