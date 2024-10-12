@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import Button from '@src/components/Button';
 import DisappearingMessage from '@src/components/DisappearingMessage';
 import Input from '@src/components/Input';
@@ -15,6 +15,15 @@ export default function AddWordPage() {
 
   const isDisabled = !(spelling && meaning && soundsLike && categories);
 
+  const resetFields = useCallback(() => {
+    setSpelling('');
+    setMeaning('');
+    setSoundsLike('');
+    setPluralForeignKey('');
+    setSingularForeignKey('');
+    setCategories('');
+  }, [setSpelling, setMeaning, setSoundsLike, setPluralForeignKey, setSingularForeignKey, setCategories]);
+
   const handleAddNewWordClick = async () => {
     const newWord = {
       spelling,
@@ -30,6 +39,8 @@ export default function AddWordPage() {
     if (isWordAlreadyExists) return console.error('WORD ALREADY EXISTS!');
 
     await indexDBClient.create(newWord);
+
+    resetFields();
 
     setSavedValue(Math.floor(Math.random() * 1000));
   };
