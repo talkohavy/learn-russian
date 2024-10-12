@@ -1,20 +1,20 @@
 {
-  "_DisappearingMessage.cBZMeRM4.js": {
-    "file": "static/js/DisappearingMessage.cBZMeRM4.js",
+  "_DisappearingMessage.BbmuEfON.js": {
+    "file": "static/js/DisappearingMessage.BbmuEfON.js",
     "name": "DisappearingMessage",
     "imports": [
       "index.html"
     ]
   },
-  "_Input.2jJmClSV.js": {
-    "file": "static/js/Input.2jJmClSV.js",
+  "_Input.uGM1axoB.js": {
+    "file": "static/js/Input.uGM1axoB.js",
     "name": "Input",
     "imports": [
       "index.html"
     ]
   },
   "index.html": {
-    "file": "main/index-CzzobuE-.js",
+    "file": "main/index-C-gSvVUO.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -30,29 +30,29 @@
     ]
   },
   "pages/AddWordPage/index.ts": {
-    "file": "static/js/index.DLEFTwh9.js",
+    "file": "static/js/index.BWQBVZ7X.js",
     "name": "index",
     "src": "pages/AddWordPage/index.ts",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_Input.2jJmClSV.js",
-      "_DisappearingMessage.cBZMeRM4.js"
+      "_Input.uGM1axoB.js",
+      "_DisappearingMessage.BbmuEfON.js"
     ]
   },
   "pages/EditWordPage/index.ts": {
-    "file": "static/js/index.CNJO6vR5.js",
+    "file": "static/js/index.BVyCmwg6.js",
     "name": "index",
     "src": "pages/EditWordPage/index.ts",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_Input.2jJmClSV.js",
-      "_DisappearingMessage.cBZMeRM4.js"
+      "_Input.uGM1axoB.js",
+      "_DisappearingMessage.BbmuEfON.js"
     ]
   },
   "pages/Home/index.tsx": {
-    "file": "static/js/index.D60wgvgf.js",
+    "file": "static/js/index.tDqyDHpn.js",
     "name": "index",
     "src": "pages/Home/index.tsx",
     "isDynamicEntry": true,
@@ -61,7 +61,7 @@
     ]
   },
   "pages/RedirectToHome/index.ts": {
-    "file": "static/js/index.D3tckmqV.js",
+    "file": "static/js/index.BW2tk35G.js",
     "name": "index",
     "src": "pages/RedirectToHome/index.ts",
     "isDynamicEntry": true,
@@ -70,13 +70,13 @@
     ]
   },
   "pages/Test/index.tsx": {
-    "file": "static/js/index.B1oIzTBW.js",
+    "file": "static/js/index.CctpV4yq.js",
     "name": "index",
     "src": "pages/Test/index.tsx",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_Input.2jJmClSV.js"
+      "_Input.uGM1axoB.js"
     ]
   }
 }
