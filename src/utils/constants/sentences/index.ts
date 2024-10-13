@@ -57,6 +57,12 @@ export type Sentence = {
 
 export const sentences: Array<Sentence> = [
   {
+    spelling: 'мой брат живёт в Москве',
+    meaning: 'my brother lives in Moscow',
+    points: 0,
+    categories: [Category.Other],
+  },
+  {
     spelling: 'кто здесь живёт?',
     meaning: 'who lives here?',
     points: 0,
