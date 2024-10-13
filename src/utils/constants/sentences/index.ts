@@ -68,6 +68,12 @@ export const sentences: Array<Sentence> = [
     points: 0,
     categories: [Category.Other],
   },
+  {
+    spelling: 'мы сейчас в америке',
+    meaning: 'we are in America now',
+    points: 0,
+    categories: [Category.Other],
+  },
   // {
   //   spelling: '',
   //   meaning: '',
