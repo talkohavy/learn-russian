@@ -5,7 +5,7 @@ import { DELAY_BETWEEN_STEPS, DELAY_START_RUNNING } from './constants';
 type NumberInputProps = {
   value: any;
   setValue: (value: any) => void;
-  step: number;
+  step?: number;
   placeholder?: string;
 };
 

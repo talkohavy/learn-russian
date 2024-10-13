@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Button from '@src/components/Button';
 import DisappearingMessage from '@src/components/DisappearingMessage';
 import Input from '@src/components/Input';
+import NumberInput from '@src/components/NumberInput';
 import Select from '@src/components/Select';
 import { indexDBClient } from '@src/main';
 import type { Category, Word } from '@src/utils/types';
@@ -17,6 +18,7 @@ export default function EditWordPage() {
   const [soundsLike, setSoundsLike] = useState<string>('');
   const [pluralForeignKey, setPluralForeignKey] = useState<string>('');
   const [singularForeignKey, setSingularForeignKey] = useState<string>('');
+  const [points, setPoints] = useState<number>(0);
   const [categories, setCategories] = useState<string>('');
 
   useEffect(() => {
@@ -25,9 +27,10 @@ export default function EditWordPage() {
     setSpelling(selectedWord.word.spelling);
     setSoundsLike(selectedWord.word.soundsLike);
     setMeaning(selectedWord.word.meaning.join(', '));
-    setCategories(selectedWord.word.categories.join(', '));
     setPluralForeignKey(selectedWord.word.pluralForeignKey ?? '');
     setSingularForeignKey(selectedWord.word.singularForeignKey ?? '');
+    setPoints(selectedWord.word.points);
+    setCategories(selectedWord.word.categories.join(', '));
   }, [selectedWord]);
 
   useEffect(() => {
@@ -55,6 +58,7 @@ export default function EditWordPage() {
       soundsLike,
       pluralForeignKey,
       singularForeignKey,
+      points,
       categories: categories.split(',').map((word) => word.trim()) as Array<Category>,
     };
 
@@ -93,6 +97,11 @@ export default function EditWordPage() {
         <div>
           <div>Singular Foreign Key:</div>
           <Input value={singularForeignKey} setValue={setSingularForeignKey} />
+        </div>
+
+        <div>
+          <div>Points:</div>
+          <NumberInput value={points} setValue={setPoints} />
         </div>
 
         <div>
