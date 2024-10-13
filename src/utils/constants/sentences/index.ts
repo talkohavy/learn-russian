@@ -116,6 +116,12 @@ export const sentences: Array<Sentence> = [
     points: 0,
     categories: [Category.Other],
   },
+  {
+    spelling: 'мои брат и сестра в школе',
+    meaning: 'my brother and sister are at school',
+    points: 0,
+    categories: [Category.Other],
+  },
   // {
   //   spelling: '',
   //   meaning: '',
