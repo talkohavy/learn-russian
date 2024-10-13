@@ -92,6 +92,12 @@ export const sentences: Array<Sentence> = [
     points: 0,
     categories: [Category.Other],
   },
+  {
+    spelling: 'ты уже в дома?',
+    meaning: 'are you at home already?',
+    points: 0,
+    categories: [Category.Other],
+  },
   // {
   //   spelling: '',
   //   meaning: '',
