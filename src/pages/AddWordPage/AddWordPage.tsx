@@ -34,6 +34,7 @@ export default function AddWordPage() {
       soundsLike,
       pluralForeignKey,
       singularForeignKey,
+      points: 0,
       categories: categoriesArr,
     };
 
