@@ -98,6 +98,12 @@ export const sentences: Array<Sentence> = [
     points: 0,
     categories: [Category.Other],
   },
+  {
+    spelling: 'берлин город в германии',
+    meaning: 'Berlin is a city in Germany',
+    points: 0,
+    categories: [Category.Other],
+  },
   // {
   //   spelling: '',
   //   meaning: '',
