@@ -60,12 +60,18 @@ export const sentences: Array<Sentence> = [
     spelling: 'кто здесь живёт?',
     meaning: 'who lives here?',
     points: 0,
-    categories: [],
+    categories: [Category.Other],
   },
   {
-    spelling: '',
-    meaning: '',
+    spelling: 'марк сейчас в россии',
+    meaning: 'Mark is in Russia now',
     points: 0,
-    categories: [],
+    categories: [Category.Other],
   },
+  // {
+  //   spelling: '',
+  //   meaning: '',
+  //   points: 0,
+  //   categories: [Category.Other],
+  // },
 ];
