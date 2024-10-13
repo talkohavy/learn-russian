@@ -50,6 +50,13 @@ export const countries: Array<Word> = [
     points: 0,
     categories: [Category.Countries],
   },
+  {
+    spelling: 'германия',
+    soundsLike: 'GER**MA**NIA',
+    meaning: ['Germany'],
+    points: 0,
+    categories: [Category.Countries],
+  },
   // {
   //   main: {
   //     spelling: '',
