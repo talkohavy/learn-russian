@@ -8,6 +8,16 @@ export type Route = {
   hideFromSidebar?: boolean;
 };
 
+type VerbBodies = {
+  ya: string;
+  ti: string;
+  on: string;
+  ona: string;
+  mi: string;
+  vi: string;
+  oni: string;
+};
+
 export type Word = {
   id?: number;
   spelling: string;
@@ -19,6 +29,17 @@ export type Word = {
   femaleForeignKey?: string;
   points: number;
   categories: Array<Category>;
+  verb?: {
+    toVerb: string;
+    theAction: string;
+    past: {
+      masculine: string;
+      feminine: string;
+      plural: string;
+    };
+    present: VerbBodies;
+    future: VerbBodies;
+  };
 };
 
 export enum Category {

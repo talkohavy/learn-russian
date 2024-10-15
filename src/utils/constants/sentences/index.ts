@@ -128,6 +128,12 @@ export const sentences: Array<Sentence> = [
     points: 0,
     categories: [Category.Other],
   },
+  {
+    spelling: 'Я хочу знать',
+    meaning: 'i want to know',
+    points: 0,
+    categories: [Category.Other],
+  },
   // {
   //   spelling: '',
   //   meaning: '',
