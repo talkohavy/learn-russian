@@ -98,7 +98,7 @@ export const allVerbsObj = {
       },
       they: {
         spelling: 'будут знать',
-        soundsLike: 'BUDUT ZNAT',
+        soundsLike: '**BU**DUT ZNAT',
         meaning: ['they will know'],
         points: 0,
         categories: [Category.Verbs],
@@ -121,7 +121,7 @@ export const allVerbsObj = {
       },
       plural: {
         spelling: 'знали',
-        soundsLike: 'ZNALI',
+        soundsLike: '**ZNA**LI',
         meaning: ['knew (plural)'],
         points: 0,
         categories: [Category.Verbs],
@@ -184,7 +184,7 @@ export const allVerbsObj = {
     future: {
       i: {
         spelling: 'буду жить',
-        soundsLike: '',
+        soundsLike: '**BU**DU ZHIT',
         meaning: ['i will live'],
         points: 0,
         categories: [Category.Verbs],
@@ -198,7 +198,7 @@ export const allVerbsObj = {
       },
       he_she: {
         spelling: 'будет жить',
-        soundsLike: '',
+        soundsLike: '**BU**DYET ZHIT',
         meaning: ['he/she will live'],
         points: 0,
         categories: [Category.Verbs],
@@ -219,7 +219,7 @@ export const allVerbsObj = {
       },
       they: {
         spelling: 'будут жить',
-        soundsLike: '',
+        soundsLike: '**BU**DUT ZHIT',
         meaning: ['they will live'],
         points: 0,
         categories: [Category.Verbs],
@@ -228,7 +228,7 @@ export const allVerbsObj = {
     past: {
       masculine: {
         spelling: 'жил',
-        soundsLike: '',
+        soundsLike: 'ZHIL',
         meaning: ['lived (single male)'],
         points: 0,
         categories: [Category.Verbs],
@@ -266,35 +266,35 @@ export const allVerbsObj = {
     },
     present: {
       i: {
-        spelling: 'гублю',
+        spelling: 'люблю',
         soundsLike: '',
         meaning: ['i love'],
         points: 0,
         categories: [Category.Verbs],
       },
       you_single: {
-        spelling: 'губишь',
+        spelling: 'любишь',
         soundsLike: '',
         meaning: ['you (single) love'],
         points: 0,
         categories: [Category.Verbs],
       },
       he_she: {
-        spelling: 'губит',
+        spelling: 'любит',
         soundsLike: '',
         meaning: ['he/she loves'],
         points: 0,
         categories: [Category.Verbs],
       },
       we: {
-        spelling: 'губим',
+        spelling: 'любим',
         soundsLike: '',
         meaning: ['we love'],
         points: 0,
         categories: [Category.Verbs],
       },
       you_plural: {
-        spelling: 'губите',
+        spelling: 'любите',
         soundsLike: '',
         meaning: ['you (plural) love'],
         points: 0,
@@ -310,42 +310,42 @@ export const allVerbsObj = {
     },
     future: {
       i: {
-        spelling: 'буду губить',
-        soundsLike: '',
+        spelling: 'буду любить',
+        soundsLike: '**BU**DU LU**BIT**',
         meaning: ['i will love'],
         points: 0,
         categories: [Category.Verbs],
       },
       you_single: {
-        spelling: 'будешь губить',
+        spelling: 'будешь любить',
         soundsLike: '',
         meaning: ['you (single) will love'],
         points: 0,
         categories: [Category.Verbs],
       },
       he_she: {
-        spelling: 'будет губить',
+        spelling: 'будет любить',
         soundsLike: '',
         meaning: ['he/she will love'],
         points: 0,
         categories: [Category.Verbs],
       },
       we: {
-        spelling: 'будем губить',
+        spelling: 'будем любить',
         soundsLike: '',
         meaning: ['we will love'],
         points: 0,
         categories: [Category.Verbs],
       },
       you_plural: {
-        spelling: 'будете губить',
+        spelling: 'будете любить',
         soundsLike: '',
         meaning: ['you (plural) will love'],
         points: 0,
         categories: [Category.Verbs],
       },
       they: {
-        spelling: 'будут губить',
+        spelling: 'будут любить',
         soundsLike: '',
         meaning: ['they will love'],
         points: 0,
@@ -354,21 +354,21 @@ export const allVerbsObj = {
     },
     past: {
       masculine: {
-        spelling: 'губил',
+        spelling: 'любил',
         soundsLike: '',
         meaning: ['loved (single male)'],
         points: 0,
         categories: [Category.Verbs],
       },
       feminine: {
-        spelling: 'губила',
+        spelling: 'любила',
         soundsLike: '',
         meaning: ['loved (single female)'],
         points: 0,
         categories: [Category.Verbs],
       },
       plural: {
-        spelling: 'губили',
+        spelling: 'любили',
         soundsLike: '',
         meaning: ['loved (plural)'],
         points: 0,
@@ -415,7 +415,7 @@ export const allVerbsObj = {
       },
       we: {
         spelling: 'работаем',
-        soundsLike: '',
+        soundsLike: 'RA**BO**TEM',
         meaning: ['we work'],
         points: 0,
         categories: [Category.Verbs],
@@ -459,7 +459,7 @@ export const allVerbsObj = {
       },
       we: {
         spelling: 'будем работать',
-        soundsLike: '',
+        soundsLike: '**BU**DYEM RA**BO**TET',
         meaning: ['we will work'],
         points: 0,
         categories: [Category.Verbs],
