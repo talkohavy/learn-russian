@@ -9,13 +9,25 @@ export type Route = {
 };
 
 type VerbBodies = {
-  ya: string;
-  ti: string;
-  on: string;
-  ona: string;
-  mi: string;
-  vi: string;
-  oni: string;
+  ya: Word;
+  ti: Word;
+  on: Word;
+  ona: Word;
+  mi: Word;
+  vi: Word;
+  oni: Word;
+};
+
+export type FullVerbForm = {
+  toVerb: Word;
+  theAction: Word;
+  past: {
+    masculine: Word;
+    feminine: Word;
+    plural: Word;
+  };
+  present: VerbBodies;
+  future: VerbBodies;
 };
 
 export type Word = {
@@ -29,17 +41,6 @@ export type Word = {
   femaleForeignKey?: string;
   points: number;
   categories: Array<Category>;
-  verb?: {
-    toVerb: string;
-    theAction: string;
-    past: {
-      masculine: string;
-      feminine: string;
-      plural: string;
-    };
-    present: VerbBodies;
-    future: VerbBodies;
-  };
 };
 
 export enum Category {

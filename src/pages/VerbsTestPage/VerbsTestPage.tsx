@@ -1,77 +1,33 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import Button from '@src/components/Button';
 import Input from '@src/components/Input';
 import Retry from '@src/components/svgs/Retry';
 import VInCircle from '@src/components/svgs/VInCircle';
 import XMark from '@src/components/svgs/XMark';
-import { indexDBClient } from '@src/main';
-import { MAX_WEIGHT } from '@src/utils/constants';
+import { allVerbs } from '@src/utils/constants/wordBank/allVerbs';
 import { SelectionStrategies, selectKWords } from '@src/utils/selectKWords';
-import type { Word } from '@src/utils/types';
 
 const wordsInTestCount = 10;
 const emptyAnswers = Array.from(Array(wordsInTestCount)).map(() => '');
 
-export default function TestPage() {
-  const [allWords, setAllWords] = useState<Array<Word>>([]);
+export default function VerbsTestPage() {
+  const [shuffleValue, setShuffleValue] = useState<number>(0);
   const [showResults, setShowResults] = useState<boolean>();
 
-  const [wordsWithUpdatedScore, setWordsWithUpdatedScore] = useState<Array<Word>>([]);
-
   const randomWords = useMemo(
-    () => selectKWords({ data: allWords, strategy: SelectionStrategies.Knowledge, wordCount: wordsInTestCount }),
+    () => selectKWords({ data: allVerbs, strategy: SelectionStrategies.Knowledge, wordCount: wordsInTestCount }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [allWords],
+    [shuffleValue],
   );
 
   const [answers, setAnswers] = useState<Array<string>>(() => emptyAnswers);
 
-  const handleCheckClick = () => {
-    setShowResults(true);
-
-    const wordsToUpdateArr: Array<Word> = [];
-
-    randomWords.forEach((randomWord, index) => {
-      const { id, spelling } = randomWord;
-
-      const isCorrectAnswer = spelling === answers[index];
-
-      if (!isCorrectAnswer) return;
-
-      const wordWithUpdatedScore: Word = { ...randomWord, points: Math.min(randomWord.points + 1, MAX_WEIGHT) };
-
-      // 1. This is for updating the in memory allWords
-      wordsToUpdateArr.push(wordWithUpdatedScore);
-
-      // 2. This is for updating the Database
-      // NOTE! The update will only be relevant on page load!
-      indexDBClient.update(id!, wordWithUpdatedScore);
-    });
-
-    setWordsWithUpdatedScore(wordsToUpdateArr);
-  };
-
-  useEffect(() => {
-    async function fetchAllWords() {
-      const fetchedWords = (await indexDBClient.readAll()) as Array<Word>;
-
-      setAllWords(fetchedWords);
-    }
-
-    fetchAllWords();
-  }, []);
+  const handleCheckClick = () => setShowResults(true);
 
   const handleNextTestClick = () => {
     setAnswers(emptyAnswers);
     setShowResults(false);
-
-    setAllWords((prevAllWords) =>
-      prevAllWords.map((prevWord) => {
-        const wordWithUpdatedScore = wordsWithUpdatedScore.find((w) => w.id === prevWord.id);
-
-        return wordWithUpdatedScore ?? prevWord;
-      }),
-    );
+    setShuffleValue(Math.random());
   };
 
   const handleRetryTestClick = () => {
@@ -79,7 +35,7 @@ export default function TestPage() {
     setShowResults(false);
   };
 
-  if (!allWords.length) return null;
+  if (!allVerbs.length) return null;
 
   return (
     <div className='flex size-full flex-col items-center justify-center gap-10 p-6'>
