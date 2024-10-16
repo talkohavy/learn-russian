@@ -136,7 +136,12 @@ export const allVerbsObj = {
       points: 0,
       categories: [Category.Verbs],
     },
-    theAction: { spelling: '', soundsLike: '', points: 0, meaning: [''] } as unknown as Word,
+    theAction: {
+      spelling: 'жизнь',
+      soundsLike: 'ZHIZN',
+      meaning: ['life'],
+      points: 0,
+    },
     present: {
       i: {
         spelling: 'живу',
@@ -408,7 +413,7 @@ export const allVerbsObj = {
       },
       he_she: {
         spelling: 'работает',
-        soundsLike: 'RA**BO**TET',
+        soundsLike: 'RA**BO**TAIT',
         meaning: ['he/she works'],
         points: 0,
         categories: [Category.Verbs],
@@ -423,7 +428,7 @@ export const allVerbsObj = {
       you_plural: {
         spelling: 'работаете',
         soundsLike: 'RA**BO**TEITI',
-        meaning: ['you (single) work'],
+        meaning: ['you (plural) work'],
         points: 0,
         categories: [Category.Verbs],
       },
