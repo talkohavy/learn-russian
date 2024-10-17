@@ -5,7 +5,7 @@ type Option = { value: string | number; label: ReactNode };
 
 type SelectProps = {
   selectedOption: Option;
-  setOption: any;
+  setOption: (value?: any) => void;
   options: Array<Option>;
   className?: string;
 };
