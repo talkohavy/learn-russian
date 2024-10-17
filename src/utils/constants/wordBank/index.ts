@@ -3,6 +3,7 @@ import { bodyRelation } from './bodyRelation';
 import { colors } from './colors';
 import { countries } from './countries';
 import { drinks } from './drinks';
+import { family } from './family';
 import { food } from './food';
 import { greetings } from './greetings';
 import { jobs } from './jobs';
@@ -18,6 +19,7 @@ export const allWords = [
   ...greetings,
   ...jobs,
   ...bodyRelation,
+  ...family,
   ...questions,
   ...countries,
   ...kitchen,
