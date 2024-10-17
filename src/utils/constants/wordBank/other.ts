@@ -516,6 +516,22 @@ export const other: Array<Word> = [
     points: 0,
     categories: [Category.Other],
   },
+  {
+    spelling: 'книга',
+    soundsLike: '**KNI**GA',
+    meaning: ['book'],
+    pluralForeignKey: 'книги',
+    points: 0,
+    categories: [Category.Other],
+  },
+  {
+    spelling: 'книги',
+    soundsLike: '**KNI**GI',
+    meaning: ['books'],
+    singularForeignKey: 'книга',
+    points: 0,
+    categories: [Category.Other],
+  },
   // {
   //   spelling: '',
   //   soundsLike: '',
