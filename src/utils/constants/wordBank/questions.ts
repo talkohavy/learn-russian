@@ -57,4 +57,25 @@ export const questions: Array<Word> = [
     points: 0,
     categories: [Category.QuestionWord],
   },
+  {
+    spelling: 'куда',
+    soundsLike: 'KU**DA**',
+    meaning: ['to where'],
+    points: 0,
+    categories: [Category.QuestionWord],
+  },
+  {
+    spelling: 'откуда',
+    soundsLike: 'ATKU**DA**',
+    meaning: ['from where'],
+    points: 0,
+    categories: [Category.QuestionWord],
+  },
+  // {
+  //   spelling: 'как',
+  //   soundsLike: 'KAK',
+  //   meaning: ['how'],
+  //   points: 0,
+  //   categories: [Category.QuestionWord],
+  // },
 ];
