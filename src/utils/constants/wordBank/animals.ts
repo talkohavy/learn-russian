@@ -1,6 +1,6 @@
 import { Category, type Word } from '@src/utils/types';
 
-export const singularAnimals: Array<Word> = [
+export const animals: Array<Word> = [
   {
     spelling: 'лошадь',
     soundsLike: '**LO**SHED',
@@ -10,10 +10,26 @@ export const singularAnimals: Array<Word> = [
     categories: [Category.Animals],
   },
   {
+    spelling: 'лошади',
+    soundsLike: '**LO**SHEDI',
+    meaning: ['horses'],
+    singularForeignKey: 'лошадь',
+    points: 0,
+    categories: [Category.Animals],
+  },
+  {
     spelling: 'кошка',
     soundsLike: '**KO**SHKA',
     meaning: ['cat'],
     pluralForeignKey: 'кошки',
+    points: 0,
+    categories: [Category.Animals],
+  },
+  {
+    spelling: 'кошки',
+    soundsLike: '**KO**SHKI',
+    meaning: ['cats'],
+    singularForeignKey: 'кошка',
     points: 0,
     categories: [Category.Animals],
   },
@@ -33,41 +49,52 @@ export const singularAnimals: Array<Word> = [
     points: 0,
     categories: [Category.Animals],
   },
-  // {
-  //   main: {
-  //     spelling: '',
-  //     soundsLike: '',
-  //     meaning: [''],
-  //   },
-  //   categories: [Category.Animals],
-  // },
-];
-
-export const pluralAnimals: Array<Word> = [
   {
-    spelling: 'лошади',
-    soundsLike: '**LO**SHEDI',
-    meaning: ['horses'],
-    singularForeignKey: 'лошадь',
+    spelling: 'корова',
+    soundsLike: 'KA**RO**VA',
+    meaning: ['cow'],
     points: 0,
     categories: [Category.Animals],
+    pluralForeignKey: 'коровы',
   },
   {
-    spelling: 'кошки',
-    soundsLike: '**KO**SHKI',
-    meaning: ['cats'],
-    singularForeignKey: 'кошка',
+    spelling: 'коровы',
+    soundsLike: 'KA**RO**VUI',
+    meaning: ['cows'],
     points: 0,
     categories: [Category.Animals],
+    singularForeignKey: 'корова',
   },
-  // {
-  //   main: {
-  //     spelling: '',
-  //     soundsLike: '',
-  //     meaning: [''],
-  //   },
-  //   categories: [Category.Animals],
-  // },
+  {
+    spelling: 'мышка',
+    soundsLike: '**MUI**SHKA',
+    meaning: ['mouse'],
+    points: 0,
+    categories: [Category.Animals],
+    pluralForeignKey: 'мышки',
+  },
+  {
+    spelling: 'мышки',
+    soundsLike: '**MUI**SHKI',
+    meaning: ['mice'],
+    points: 0,
+    categories: [Category.Animals],
+    singularForeignKey: 'мышка',
+  },
+  {
+    spelling: 'мишка',
+    soundsLike: '**MI**SHKA',
+    meaning: ['bear'],
+    points: 0,
+    categories: [Category.Animals],
+    singularForeignKey: 'мишки',
+  },
+  {
+    spelling: 'мишки',
+    soundsLike: '**MI**SHKA',
+    meaning: ['bears'],
+    points: 0,
+    categories: [Category.Animals],
+    singularForeignKey: 'мишка',
+  },
 ];
-
-export const animals = [...singularAnimals, ...pluralAnimals];
