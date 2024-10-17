@@ -31,22 +31,6 @@ export const other: Array<Word> = [
     categories: [Category.Other],
   },
   {
-    spelling: 'тарелка',
-    soundsLike: 'TAREILKA',
-    meaning: ['plate'],
-    pluralForeignKey: 'тарелки',
-    points: 0,
-    categories: [Category.Other],
-  },
-  {
-    spelling: 'тарелки',
-    soundsLike: 'TAREILKI',
-    meaning: ['plates'],
-    singularForeignKey: 'тарелка',
-    points: 0,
-    categories: [Category.Other],
-  },
-  {
     spelling: 'мальчик',
     soundsLike: '**MAL**CHIK',
     meaning: ['boy'],

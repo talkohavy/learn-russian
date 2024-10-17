@@ -6,6 +6,7 @@ import { drinks } from './drinks';
 import { food } from './food';
 import { greetings } from './greetings';
 import { jobs } from './jobs';
+import { kitchen } from './kitchen';
 import { other } from './other';
 import { questions } from './questions';
 
@@ -19,5 +20,6 @@ export const allWords = [
   ...bodyRelation,
   ...questions,
   ...countries,
+  ...kitchen,
   ...other,
 ];

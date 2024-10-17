@@ -58,5 +58,6 @@ export enum Category {
   QuestionWord = 'question-word',
   Countries = 'countries',
   Greetings = 'greetings',
+  Kitchen = 'kitchen',
   Other = 'other',
 }
