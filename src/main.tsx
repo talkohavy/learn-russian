@@ -18,6 +18,8 @@ function Client() {
           indexDBClient = new IndexedDBClient(dbName, tableName);
 
           await indexDBClient.init();
+
+          await indexDBClient.populateIfNewWords();
         }}
       >
         <BrowserRouter>

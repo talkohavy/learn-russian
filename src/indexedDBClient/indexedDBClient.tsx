@@ -1,4 +1,5 @@
 import { allWords } from '@src/utils/constants/wordBank';
+import { Word } from '@src/utils/types';
 
 interface IDBData {
   id?: number; // id is optional since it will be auto-generated
@@ -27,15 +28,7 @@ export class IndexedDBClient {
 
         if (isTableAlreadyExists) return;
 
-        const table = db.createObjectStore(this.tableName, { keyPath: 'id', autoIncrement: true });
-
-        // Populate with initial data:
-        table.transaction.oncomplete = () => {
-          const transaction = db.transaction(this.tableName, 'readwrite');
-          const objectStore = transaction.objectStore(this.tableName);
-
-          allWords.forEach((item) => objectStore.add(item));
-        };
+        db.createObjectStore(this.tableName, { keyPath: 'id', autoIncrement: true });
       };
 
       const returnDbOnSuccess = (event: Event) => {
@@ -192,5 +185,22 @@ export class IndexedDBClient {
       const tableNames = Array.from(this.db.objectStoreNames);
       resolve(tableNames);
     });
+  }
+
+  async populateIfNewWords(): Promise<void> {
+    if (!this.db) throw new Error('Database not initialized');
+
+    const allWordsInDb = await this.readAll();
+
+    const allWordsInDbAsSet = new Set(allWordsInDb.map((word) => (word as Word).spelling)); // assuming 'word' is the field in each record
+
+    const newWords = allWords.filter((word) => !allWordsInDbAsSet.has(word.spelling)); // filter out already existing words
+
+    if (!newWords.length) return;
+
+    const transaction = this.db.transaction(this.tableName, 'readwrite');
+    const objectStore = transaction.objectStore(this.tableName);
+
+    newWords.forEach((item) => objectStore.add(item));
   }
 }
