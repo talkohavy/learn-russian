@@ -1,27 +1,47 @@
 import { useEffect, useMemo, useState } from 'react';
 import Button from '@src/components/Button';
 import Input from '@src/components/Input';
+import Select from '@src/components/Select';
 import Retry from '@src/components/svgs/Retry';
 import VInCircle from '@src/components/svgs/VInCircle';
 import XMark from '@src/components/svgs/XMark';
 import { indexDBClient } from '@src/main';
 import { MAX_WEIGHT } from '@src/utils/constants';
 import { SelectionStrategies, selectKWords } from '@src/utils/selectKWords';
-import type { Word } from '@src/utils/types';
+import { Category, type Word } from '@src/utils/types';
 
+const ALL_WORDS = '---' as Category;
 const wordsInTestCount = 10;
 const emptyAnswers = Array.from(Array(wordsInTestCount)).map(() => '');
 
+const categoryOptions = Object.entries(Category).map(([categoryName, categoryValue]) => ({
+  value: categoryValue,
+  label: categoryName,
+}));
+categoryOptions.unshift({ value: ALL_WORDS, label: '---' });
+
 export default function TestPage() {
   const [allWords, setAllWords] = useState<Array<Word>>([]);
+  const [selectedCategoryOption, setSelectedCategoryOption] = useState(categoryOptions[0]!);
   const [showResults, setShowResults] = useState<boolean>();
 
   const [wordsWithUpdatedScore, setWordsWithUpdatedScore] = useState<Array<Word>>([]);
 
   const randomWords = useMemo(
-    () => selectKWords({ data: allWords, strategy: SelectionStrategies.Knowledge, wordCount: wordsInTestCount }),
+    () => {
+      const wordsToChooseFrom =
+        selectedCategoryOption.value === ALL_WORDS
+          ? allWords
+          : allWords.filter((word) => word.categories.includes(selectedCategoryOption.value));
+
+      return selectKWords({
+        data: wordsToChooseFrom,
+        strategy: SelectionStrategies.Knowledge,
+        wordCount: wordsInTestCount,
+      });
+    },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [allWords],
+    [allWords, selectedCategoryOption],
   );
 
   const [answers, setAnswers] = useState<Array<string>>(() => emptyAnswers);
@@ -83,6 +103,8 @@ export default function TestPage() {
 
   return (
     <div className='flex size-full flex-col items-center justify-center gap-10 p-6'>
+      <Select selectedOption={selectedCategoryOption} setOption={setSelectedCategoryOption} options={categoryOptions} />
+
       <div className='flex w-full max-w-md flex-col gap-3 rounded-md border p-4'>
         {randomWords.map(({ spelling, meaning, soundsLike }, index) => {
           const isCorrectAnswer = spelling === answers[index];
