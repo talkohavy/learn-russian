@@ -1,34 +1,34 @@
 {
-  "_DisappearingMessage.Cx6BpzUo.js": {
-    "file": "static/js/DisappearingMessage.Cx6BpzUo.js",
+  "_DisappearingMessage.Du_rsHpy.js": {
+    "file": "static/js/DisappearingMessage.Du_rsHpy.js",
     "name": "DisappearingMessage",
     "imports": [
       "index.html"
     ]
   },
-  "_Input.C7fvVYVV.js": {
-    "file": "static/js/Input.C7fvVYVV.js",
+  "_Input.-OJK72hN.js": {
+    "file": "static/js/Input.-OJK72hN.js",
     "name": "Input",
     "imports": [
       "index.html"
     ]
   },
-  "_Select.1icoqjpK.js": {
-    "file": "static/js/Select.1icoqjpK.js",
+  "_Select.D0Vh_Yyz.js": {
+    "file": "static/js/Select.D0Vh_Yyz.js",
     "name": "Select",
     "imports": [
       "index.html"
     ]
   },
-  "_selectKWords.DPwbJBnV.js": {
-    "file": "static/js/selectKWords.DPwbJBnV.js",
+  "_selectKWords.Bk9sUBQ9.js": {
+    "file": "static/js/selectKWords.Bk9sUBQ9.js",
     "name": "selectKWords",
     "imports": [
       "index.html"
     ]
   },
   "index.html": {
-    "file": "main/index-EbY9jCNz.js",
+    "file": "main/index-DoGVyiw4.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -45,30 +45,30 @@
     ]
   },
   "pages/AddWordPage/index.ts": {
-    "file": "static/js/index.BwXSyjNF.js",
+    "file": "static/js/index.z1VB9zvI.js",
     "name": "index",
     "src": "pages/AddWordPage/index.ts",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_Input.C7fvVYVV.js",
-      "_DisappearingMessage.Cx6BpzUo.js"
+      "_Input.-OJK72hN.js",
+      "_DisappearingMessage.Du_rsHpy.js"
     ]
   },
   "pages/EditWordPage/index.ts": {
-    "file": "static/js/index.BXjMMYJz.js",
+    "file": "static/js/index.CkjAys7R.js",
     "name": "index",
     "src": "pages/EditWordPage/index.ts",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_Input.C7fvVYVV.js",
-      "_DisappearingMessage.Cx6BpzUo.js",
-      "_Select.1icoqjpK.js"
+      "_Input.-OJK72hN.js",
+      "_DisappearingMessage.Du_rsHpy.js",
+      "_Select.D0Vh_Yyz.js"
     ]
   },
   "pages/Home/index.tsx": {
-    "file": "static/js/index.Dft-kDkX.js",
+    "file": "static/js/index.BO_Yi-oC.js",
     "name": "index",
     "src": "pages/Home/index.tsx",
     "isDynamicEntry": true,
@@ -77,7 +77,7 @@
     ]
   },
   "pages/RedirectToHome/index.ts": {
-    "file": "static/js/index.B181DMBR.js",
+    "file": "static/js/index.CHcUxEYH.js",
     "name": "index",
     "src": "pages/RedirectToHome/index.ts",
     "isDynamicEntry": true,
@@ -86,26 +86,26 @@
     ]
   },
   "pages/Test/index.ts": {
-    "file": "static/js/index.CWQkWw4V.js",
+    "file": "static/js/index.DxBmUdVT.js",
     "name": "index",
     "src": "pages/Test/index.ts",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_Input.C7fvVYVV.js",
-      "_Select.1icoqjpK.js",
-      "_selectKWords.DPwbJBnV.js"
+      "_Input.-OJK72hN.js",
+      "_Select.D0Vh_Yyz.js",
+      "_selectKWords.Bk9sUBQ9.js"
     ]
   },
   "pages/VerbsTestPage/index.ts": {
-    "file": "static/js/index.ChkGNTe8.js",
+    "file": "static/js/index.BVOrJpzI.js",
     "name": "index",
     "src": "pages/VerbsTestPage/index.ts",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_Input.C7fvVYVV.js",
-      "_selectKWords.DPwbJBnV.js"
+      "_Input.-OJK72hN.js",
+      "_selectKWords.Bk9sUBQ9.js"
     ]
   }
 }
