@@ -532,13 +532,18 @@ export const other: Array<Word> = [
     points: 0,
     categories: [Category.Other],
   },
-  // {
-  //   spelling: '',
-  //   soundsLike: '',
-  //   meaning: [''],
-  //   pluralForeignKey: '',
-  //   singularForeignKey: '',
-  //   points: 0,
-  //   categories: [Category.Other],
-  // },
+  {
+    spelling: 'много',
+    soundsLike: '**MNO**GA',
+    meaning: ['a lot'],
+    points: 0,
+    categories: [Category.Other],
+  },
+  {
+    spelling: 'время',
+    soundsLike: '**VRE**MYA',
+    meaning: ['time'],
+    points: 0,
+    categories: [Category.Other],
+  },
 ];
