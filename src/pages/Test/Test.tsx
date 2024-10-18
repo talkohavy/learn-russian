@@ -102,7 +102,7 @@ export default function TestPage() {
   if (!allWords.length) return null;
 
   return (
-    <div className='flex size-full flex-col items-center justify-center gap-10 p-6'>
+    <div className='flex size-full flex-col items-center justify-center gap-10 overflow-auto p-6'>
       <Select selectedOption={selectedCategoryOption} setOption={setSelectedCategoryOption} options={categoryOptions} />
 
       <div className='flex w-full max-w-md flex-col gap-3 rounded-md border p-4'>
