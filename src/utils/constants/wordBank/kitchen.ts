@@ -56,7 +56,7 @@ export const kitchen: Array<Word> = [
   {
     spelling: 'чашка',
     soundsLike: '**CHA**SHKA',
-    meaning: ['cup'],
+    meaning: ['cup (mug)'],
     pluralForeignKey: 'чашки',
     singularForeignKey: '',
     points: 0,
@@ -65,7 +65,7 @@ export const kitchen: Array<Word> = [
   {
     spelling: 'чашки',
     soundsLike: '**CHA**SHKI',
-    meaning: ['cups'],
+    meaning: ['cups (mugs)'],
     pluralForeignKey: '',
     singularForeignKey: 'чашка',
     points: 0,
@@ -89,15 +89,29 @@ export const kitchen: Array<Word> = [
     points: 0,
     categories: [Category.Kitchen],
   },
-  // {
-  //   spelling: '',
-  //   soundsLike: '',
-  //   meaning: [''],
-  //   pluralForeignKey: '',
-  //   singularForeignKey: '',
-  //   points: 0,
-  //   categories: [Category.Kitchen],
-  // },
+  {
+    spelling: 'кухня',
+    soundsLike: '**KU**KHNYA',
+    meaning: ['kitchen'],
+    points: 0,
+    categories: [Category.Kitchen],
+  },
+  {
+    spelling: 'стакан',
+    soundsLike: 'STA**KAN**',
+    meaning: ['cup'],
+    points: 0,
+    categories: [Category.Kitchen],
+    pluralForeignKey: 'стаканы',
+  },
+  {
+    spelling: 'стаканы',
+    soundsLike: 'STA**KAN**UI',
+    meaning: ['cups'],
+    points: 0,
+    singularForeignKey: 'стакан',
+    categories: [Category.Kitchen],
+  },
 ];
 
 // {
