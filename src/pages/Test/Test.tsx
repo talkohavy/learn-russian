@@ -117,10 +117,10 @@ export default function TestPage() {
                 <Input
                   value={answers[index]!}
                   setValue={(value) => setAnswers((prevAnswers) => prevAnswers.with(index, value))}
-                  className='!w-52'
+                  className='!w-36'
                 />
 
-                <div className='h-full w-12'>
+                <div className='h-full w-6'>
                   {showResults && (
                     <div className='flex h-full items-center justify-center'>
                       {isCorrectAnswer ? (
