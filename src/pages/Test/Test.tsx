@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Button from '@src/components/Button';
 import Input from '@src/components/Input';
 import Select from '@src/components/Select';
+import { SelectOption } from '@src/components/Select/types';
 import Retry from '@src/components/svgs/Retry';
 import VInCircle from '@src/components/svgs/VInCircle';
 import XMark from '@src/components/svgs/XMark';
@@ -14,7 +15,7 @@ const ALL_WORDS = '---' as Category;
 const wordsInTestCount = 10;
 const emptyAnswers = Array.from(Array(wordsInTestCount)).map(() => '');
 
-const categoryOptions = Object.entries(Category).map(([categoryName, categoryValue]) => ({
+const categoryOptions: Array<SelectOption> = Object.entries(Category).map(([categoryName, categoryValue]) => ({
   value: categoryValue,
   label: categoryName,
 }));
@@ -22,7 +23,7 @@ categoryOptions.unshift({ value: ALL_WORDS, label: '---' });
 
 export default function TestPage() {
   const [allWords, setAllWords] = useState<Array<Word>>([]);
-  const [selectedCategoryOption, setSelectedCategoryOption] = useState(categoryOptions[0]!);
+  const [selectedCategoryOption, setSelectedCategoryOption] = useState<SelectOption>(categoryOptions[0]!);
   const [showResults, setShowResults] = useState<boolean>();
 
   const [wordsWithUpdatedScore, setWordsWithUpdatedScore] = useState<Array<Word>>([]);
@@ -32,7 +33,7 @@ export default function TestPage() {
       const wordsToChooseFrom =
         selectedCategoryOption.value === ALL_WORDS
           ? allWords
-          : allWords.filter((word) => word.categories.includes(selectedCategoryOption.value));
+          : allWords.filter((word) => word.categories.includes(selectedCategoryOption.value as Category));
 
       return selectKWords({
         data: wordsToChooseFrom,
@@ -99,11 +100,16 @@ export default function TestPage() {
     setShowResults(false);
   };
 
+  const handleCategoryChange = (value: SelectOption) => {
+    setSelectedCategoryOption(value);
+    handleRetryTestClick();
+  };
+
   if (!allWords.length) return null;
 
   return (
     <div className='flex size-full flex-col items-center justify-center gap-10 overflow-auto p-6'>
-      <Select selectedOption={selectedCategoryOption} setOption={setSelectedCategoryOption} options={categoryOptions} />
+      <Select selectedOption={selectedCategoryOption} setOption={handleCategoryChange} options={categoryOptions} />
 
       <div className='flex w-full max-w-md flex-col gap-3 rounded-md border p-4'>
         {randomWords.map(({ spelling, meaning, soundsLike }, index) => {
