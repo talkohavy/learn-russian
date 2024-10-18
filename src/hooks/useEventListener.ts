@@ -16,7 +16,9 @@ export default function useEventListener(props: UseEventListenerProps) {
 
   const callbackRef = useRef(fnToRun);
 
-  useEffect(() => (callbackRef.current = fnToRun), [fnToRun]);
+  useEffect(() => {
+    callbackRef.current = fnToRun;
+  }, [fnToRun]);
 
   useEffect(() => {
     if (!shouldExecute) return;
