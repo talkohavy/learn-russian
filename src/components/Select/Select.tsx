@@ -1,12 +1,10 @@
-import type { ReactNode } from 'react';
 import clsx from 'clsx';
-
-type Option = { value: string | number; label: ReactNode };
+import { SelectOption } from './types';
 
 type SelectProps = {
-  selectedOption: Option;
-  setOption: (value?: any) => void;
-  options: Array<Option>;
+  selectedOption: SelectOption;
+  setOption: (value: SelectOption) => void;
+  options: Array<SelectOption>;
   className?: string;
 };
 
@@ -19,6 +17,9 @@ export default function Select(props: SelectProps) {
       onChange={(e) => {
         const selectedValue = e.target.value;
         const selectedOption = options.find((option) => option.value.toString() === selectedValue.toString());
+
+        if (!selectedOption) throw new Error("could not find `selectedValue` inside of Select's options array");
+
         setOption(selectedOption);
       }}
       className={clsx(
