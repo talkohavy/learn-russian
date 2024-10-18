@@ -1,2 +1,0 @@
-import{j as s,c as d}from"../../main/index-DoGVyiw4.js";function p(r){const{selectedOption:n,setOption:c,options:o,className:l}=r;return s.jsx("select",{value:n.value,onChange:e=>{const t=e.target.value,a=o.find(i=>i.value.toString()===t.toString());c(a)},className:d("h-8 cursor-pointer rounded-md border p-1 hover:border-blue-400 focus:border-blue-600 dark:bg-slate-900",l),children:o.map(({value:e,label:t})=>s.jsx("option",{value:e,children:t},e))})}export{p as S};
-//# sourceMappingURL=Select.BULhaWDY.js.map
