@@ -2,6 +2,13 @@ import { Category, type Word } from '@src/utils/types';
 
 export const family: Array<Word> = [
   {
+    spelling: 'семья',
+    soundsLike: 'SYEMYA',
+    meaning: ['family'],
+    points: 0,
+    categories: [Category.Family],
+  },
+  {
     spelling: 'мама',
     soundsLike: 'MAMA',
     meaning: ['mom'],
