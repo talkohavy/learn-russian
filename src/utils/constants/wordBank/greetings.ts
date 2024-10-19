@@ -101,7 +101,7 @@ export const greetings: Array<Word> = [
   },
   {
     spelling: 'ничего нового',
-    soundsLike: 'NICHEVO NOVAVA',
+    soundsLike: 'NICHE**VO** **NO**VAVA',
     meaning: ['nothing new'],
     points: 0,
     categories: [Category.Greetings],
