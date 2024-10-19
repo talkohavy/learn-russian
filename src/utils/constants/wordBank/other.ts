@@ -226,6 +226,13 @@ export const other: Array<Word> = [
     categories: [Category.Other],
   },
   {
+    spelling: 'который',
+    soundsLike: 'KATORI',
+    meaning: ['which (that is)'],
+    points: 0,
+    categories: [Category.QuestionWord],
+  },
+  {
     spelling: 'здесь',
     soundsLike: 'ZDIS',
     meaning: ['here'],

@@ -30,9 +30,9 @@ export const questions: Array<Word> = [
     categories: [Category.QuestionWord],
   },
   {
-    spelling: 'который',
-    soundsLike: 'KATORI',
-    meaning: ['which'],
+    spelling: 'какой',
+    soundsLike: 'KAKOI',
+    meaning: ['which (question)'],
     points: 0,
     categories: [Category.QuestionWord],
   },
