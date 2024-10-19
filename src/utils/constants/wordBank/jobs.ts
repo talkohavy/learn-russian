@@ -87,4 +87,11 @@ export const jobs: Array<Word> = [
     points: 0,
     categories: [Category.Jobs],
   },
+  {
+    spelling: 'экономист',
+    soundsLike: 'E**KA**NAMIST',
+    meaning: ['economist'],
+    points: 0,
+    categories: [Category.Jobs],
+  },
 ];
