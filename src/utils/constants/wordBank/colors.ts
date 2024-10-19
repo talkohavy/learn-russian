@@ -52,7 +52,7 @@ export const colors: Array<Word> = [
   },
   {
     spelling: 'серый',
-    soundsLike: '**SER**VI',
+    soundsLike: '**SYE**RUI',
     meaning: ['gray'],
     points: 0,
     categories: [Category.Colors],
