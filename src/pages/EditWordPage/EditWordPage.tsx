@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Button from '@src/components/Button';
 import DisappearingMessage from '@src/components/DisappearingMessage';
 import Input from '@src/components/Input';
 import NumberInput from '@src/components/NumberInput';
 import Select from '@src/components/Select';
+import { SelectOption } from '@src/components/Select/types';
 import { indexDBClient } from '@src/main';
 import type { Category, Word } from '@src/utils/types';
 
@@ -11,7 +12,7 @@ const defaultOption = { value: -1, label: '---', word: {} as Word };
 
 export default function EditWordPage() {
   const [savedValue, setSavedValue] = useState<number | null>(null);
-  const [selectedWord, setSelectedWord] = useState(() => defaultOption);
+  const [selectedWord, setSelectedWord] = useState<SelectOption>(() => defaultOption);
   const [wordOptions, setWordOptions] = useState<Array<{ value: number | string; label: string; word: Word }>>([]);
   const [spelling, setSpelling] = useState('');
   const [meaning, setMeaning] = useState<string>('');
@@ -48,7 +49,16 @@ export default function EditWordPage() {
     fetchWordOptions();
   }, []);
 
-  const isDisabled = !(spelling && meaning && soundsLike && categories && selectedWord.value > -1);
+  const isDisabled = !(spelling && meaning && soundsLike && categories && (selectedWord.value as number) > -1);
+
+  const resetFields = useCallback(() => {
+    setSpelling('');
+    setMeaning('');
+    setSoundsLike('');
+    setPluralForeignKey('');
+    setSingularForeignKey('');
+    setCategories('');
+  }, [setSpelling, setMeaning, setSoundsLike, setPluralForeignKey, setSingularForeignKey, setCategories]);
 
   const handleEditWordClick = async () => {
     const updatedWord: Word = {
@@ -63,6 +73,8 @@ export default function EditWordPage() {
     };
 
     await indexDBClient.update(updatedWord.id!, updatedWord);
+
+    resetFields();
 
     setSavedValue(Math.floor(Math.random() * 1000));
   };
