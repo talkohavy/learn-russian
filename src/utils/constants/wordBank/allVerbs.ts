@@ -553,6 +553,10 @@ export const allVerbsObj = {
   // },
 };
 
+function addVerbCategoryToWord(word: Word) {
+  return { ...word, categories: [Category.Verbs] };
+}
+
 function extractAllWordsFrom(verbObj: any) {
   return [
     verbObj.toVerb,
@@ -572,7 +576,7 @@ function extractAllWordsFrom(verbObj: any) {
     verbObj.future.we,
     verbObj.future.you_plural,
     verbObj.future.they,
-  ];
+  ].map(addVerbCategoryToWord);
 }
 
 export const allVerbs: Array<Word> = Object.keys(allVerbsObj)

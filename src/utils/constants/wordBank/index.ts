@@ -1,3 +1,4 @@
+import { allVerbs } from './allVerbs';
 import { animals } from './animals';
 import { bodyRelation } from './bodyRelation';
 import { colors } from './colors';
@@ -23,5 +24,6 @@ export const allWords = [
   ...questions,
   ...countries,
   ...kitchen,
+  ...allVerbs,
   ...other,
 ];
