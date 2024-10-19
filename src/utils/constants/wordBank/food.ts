@@ -2,6 +2,13 @@ import { Category, type Word } from '@src/utils/types';
 
 export const food: Array<Word> = [
   {
+    spelling: 'еда',
+    soundsLike: 'YE**DA**',
+    meaning: ['food'],
+    points: 0,
+    categories: [Category.Other],
+  },
+  {
     spelling: 'яблоко',
     soundsLike: '**YA**BLAKA',
     meaning: ['apple'],
@@ -96,12 +103,11 @@ export const food: Array<Word> = [
     points: 0,
     categories: [Category.Food],
   },
-  // {
-  //   main: {
-  //     spelling: '',
-  //     soundsLike: '',
-  //     meaning: [''],
-  //   },
-  //   categories: [Category.Food],
-  // },
+  {
+    spelling: 'шоколад',
+    soundsLike: 'SHEKA**LAD**',
+    meaning: ['chocolate'],
+    points: 0,
+    categories: [Category.Food],
+  },
 ];
