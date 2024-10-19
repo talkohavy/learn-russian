@@ -770,4 +770,20 @@ export const other: Array<Word> = [
     points: 0,
     categories: [Category.Other],
   },
+  {
+    spelling: 'мишка',
+    soundsLike: '**MI**SHKA',
+    meaning: ['teddy bear'],
+    points: 0,
+    categories: [Category.Animals],
+    singularForeignKey: 'мишки',
+  },
+  {
+    spelling: 'мишки',
+    soundsLike: '**MI**SHKA',
+    meaning: ['teddy bears'],
+    points: 0,
+    categories: [Category.Animals],
+    singularForeignKey: 'мишка',
+  },
 ];
