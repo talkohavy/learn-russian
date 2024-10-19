@@ -17,7 +17,7 @@ export const colors: Array<Word> = [
   },
   {
     spelling: 'жёлтый',
-    soundsLike: '**ZHO**LTI',
+    soundsLike: '**ZHYO**LTI',
     meaning: ['yellow'],
     points: 0,
     categories: [Category.Colors],
@@ -61,6 +61,13 @@ export const colors: Array<Word> = [
     spelling: 'голубой',
     soundsLike: 'GALU**BOY**',
     meaning: ['cyan'],
+    points: 0,
+    categories: [Category.Colors],
+  },
+  {
+    spelling: 'оранжевый',
+    soundsLike: 'O**RA**NZHEVYY',
+    meaning: ['orange'],
     points: 0,
     categories: [Category.Colors],
   },
