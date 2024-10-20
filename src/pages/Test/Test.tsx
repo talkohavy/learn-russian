@@ -6,6 +6,9 @@ import { SelectOption } from '@src/components/Select/types';
 import Retry from '@src/components/svgs/Retry';
 import VInCircle from '@src/components/svgs/VInCircle';
 import XMark from '@src/components/svgs/XMark';
+import Tooltip from '@src/components/Tooltip';
+import { Placement } from '@src/components/Tooltip/types';
+import TooltipTrigger from '@src/components/TooltipTrigger';
 import { indexDBClient } from '@src/main';
 import { MAX_WEIGHT } from '@src/utils/constants';
 import { SelectionStrategies, selectKWords } from '@src/utils/selectKWords';
@@ -35,11 +38,13 @@ export default function TestPage() {
           ? allWords
           : allWords.filter((word) => word.categories.includes(selectedCategoryOption.value as Category));
 
-      return selectKWords({
+      const selectedWords = selectKWords({
         data: wordsToChooseFrom,
         strategy: SelectionStrategies.Knowledge,
         wordCount: wordsInTestCount,
       });
+
+      return selectedWords;
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [allWords, selectedCategoryOption],
@@ -114,6 +119,7 @@ export default function TestPage() {
       <div className='flex w-full max-w-md flex-col gap-3 rounded-md border p-4'>
         {randomWords.map(({ spelling, meaning, soundsLike }, index) => {
           const isCorrectAnswer = spelling === answers[index];
+          const uniqueId = spelling.split(' ').join('-');
 
           return (
             <div key={index} className='flex h-10 w-full items-center justify-between gap-10'>
@@ -128,16 +134,22 @@ export default function TestPage() {
 
                 <div className='h-full w-6'>
                   {showResults && (
-                    <div className='flex h-full items-center justify-center'>
+                    <TooltipTrigger
+                      uniqueId={uniqueId}
+                      contentOverride={spelling}
+                      className='flex h-full items-center justify-center'
+                    >
                       {isCorrectAnswer ? (
-                        <VInCircle className='h-1/2' borderColor='#19d23a' color='#19d23a' title={spelling} />
+                        <VInCircle className='h-1/2' borderColor='#19d23a' color='#19d23a' />
                       ) : (
-                        <XMark className='h-1/2 stroke-red-500' title={spelling} />
+                        <XMark className='h-1/2 stroke-red-500' />
                       )}
-                    </div>
+                    </TooltipTrigger>
                   )}
                 </div>
               </div>
+
+              <Tooltip uniqueId={uniqueId} place={Placement.Top} shouldFollowMouse />
             </div>
           );
         })}
