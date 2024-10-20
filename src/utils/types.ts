@@ -59,5 +59,6 @@ export enum Category {
   Countries = 'countries',
   Greetings = 'greetings',
   Kitchen = 'kitchen',
+  Sentences = 'sentences',
   Other = 'other',
 }
