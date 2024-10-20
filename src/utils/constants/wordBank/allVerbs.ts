@@ -152,7 +152,7 @@ export const allVerbsObj = {
       },
       you_single: {
         spelling: 'живёшь',
-        soundsLike: 'ZHI**VU**',
+        soundsLike: 'ZHIV**YOSH**',
         meaning: ['you (single) live'],
         points: 0,
         categories: [Category.Verbs],
