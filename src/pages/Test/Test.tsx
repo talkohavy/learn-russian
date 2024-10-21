@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useId, useMemo, useState } from 'react';
 import Button from '@src/components/Button';
 import Input from '@src/components/Input';
 import Select from '@src/components/Select';
@@ -25,6 +25,7 @@ const categoryOptions: Array<SelectOption> = Object.entries(Category).map(([cate
 categoryOptions.unshift({ value: ALL_WORDS, label: '---' });
 
 export default function TestPage() {
+  const tooltipUniqueId = useId();
   const [allWords, setAllWords] = useState<Array<Word>>([]);
   const [selectedCategoryOption, setSelectedCategoryOption] = useState<SelectOption>(categoryOptions[0]!);
   const [showResults, setShowResults] = useState<boolean>();
@@ -119,7 +120,6 @@ export default function TestPage() {
       <div className='flex w-full max-w-md flex-col gap-3 rounded-md border p-4'>
         {randomWords.map(({ spelling, meaning, soundsLike }, index) => {
           const isCorrectAnswer = spelling === answers[index];
-          const uniqueId = spelling.split(' ').join('-');
 
           return (
             <div key={index} className='flex h-10 w-full items-center justify-between gap-10'>
@@ -135,7 +135,7 @@ export default function TestPage() {
                 <div className='h-full w-6'>
                   {showResults && (
                     <TooltipTrigger
-                      uniqueId={uniqueId}
+                      groupId={tooltipUniqueId}
                       contentOverride={spelling}
                       className='flex h-full items-center justify-center'
                     >
@@ -149,7 +149,7 @@ export default function TestPage() {
                 </div>
               </div>
 
-              <Tooltip uniqueId={uniqueId} place={Placement.Top} shouldFollowMouse />
+              <Tooltip groupId={tooltipUniqueId} place={Placement.Top} isClickable />
             </div>
           );
         })}
