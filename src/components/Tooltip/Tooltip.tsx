@@ -1,17 +1,23 @@
 import { PropsWithChildren } from 'react';
 import { ChildrenType, Tooltip as TooltipOriginal } from 'react-tooltip';
-import { tooltipClassName } from './constants';
 import styles from './Tooltip.module.scss';
-import { Placement } from './types';
+import { Placement, Variant } from './types';
 
 type TooltipProps = PropsWithChildren<{
-  uniqueId?: string;
+  groupId?: string;
   /**
    * Position relative to the anchor element where the tooltip will be rendered (if possible)
    * @default 'top'
    */
   place?: Placement;
   /**
+   * Set to `true` if you have content which is clickable.
+   * This only works if you do NOT set your own isOpen/setIsOpen logic.
+   *
+   * **TIP**
+   *
+   * It is probably gonna look & feel better if you'd leave `shouldFollowMouse`
+   * as _false_, when setting `isClickable` to _true_.
    * @default false
    */
   isClickable?: boolean;
@@ -21,6 +27,10 @@ type TooltipProps = PropsWithChildren<{
   offset?: number;
   delayShow?: number;
   delayHide?: number;
+  /**
+   * @default undefined
+   */
+  isOpen?: boolean;
   /**
    * @default false
    */
@@ -37,12 +47,15 @@ type TooltipProps = PropsWithChildren<{
    * @default false
    */
   noArrow?: boolean;
+  variant?: Variant;
   render?: (render: { content: string | null; activeAnchor: HTMLElement | null }) => ChildrenType;
+  className?: string;
 }>;
 
 export default function Tooltip(props: TooltipProps) {
   const {
-    uniqueId,
+    groupId,
+    isOpen,
     place = Placement.Top,
     isClickable,
     offset,
@@ -54,12 +67,15 @@ export default function Tooltip(props: TooltipProps) {
     noArrow,
     children,
     render,
+    variant,
+    className,
   } = props;
 
   return (
     <div className={styles.tooltip}>
       <TooltipOriginal
-        anchorSelect={`.${uniqueId ?? tooltipClassName}`}
+        id={groupId}
+        isOpen={isOpen}
         place={place}
         clickable={isClickable}
         offset={offset}
@@ -70,8 +86,10 @@ export default function Tooltip(props: TooltipProps) {
         hidden={hide}
         noArrow={noArrow}
         render={render}
+        variant={variant}
+        className={className}
+        // anchorSelect={`.${tooltipClassName}`}
         // content='placeholder...' // <--- DO NOT USE THIS! It takes precedence over `children`.
-        // isOpen={isOpen}
         // setIsOpen={setIsOpen}
         // afterShow={() => {}}
         // afterHide={() => {}}

@@ -1,3 +1,12 @@
+export enum Variant {
+  Dark = 'dark',
+  Light = 'light',
+  Success = 'success',
+  Warning = 'warning',
+  Error = 'error',
+  Info = 'info',
+}
+
 export enum Placement {
   Top = 'top',
   TopStart = 'top-start',

@@ -1,9 +1,8 @@
 import { PropsWithChildren, useMemo } from 'react';
-import clsx from 'clsx';
-import { tooltipClassName } from '../Tooltip/constants';
-import { Placement } from '../Tooltip/types';
+import { Placement, Variant } from '../Tooltip/types';
 
 type TooltipTriggerProps = PropsWithChildren<{
+  groupId?: string;
   /**
    * Content to be displayed in the tooltip.
    */
@@ -12,6 +11,7 @@ type TooltipTriggerProps = PropsWithChildren<{
   placeOverride?: Placement;
   delayShowOverride?: number;
   delayHideOverride?: number;
+  variantOverride?: Variant;
   /**
    * @default false
    */
@@ -20,12 +20,15 @@ type TooltipTriggerProps = PropsWithChildren<{
    * @default false
    */
   hide?: boolean;
-  uniqueId?: string;
+  onClick?: (value: any) => void;
+  onMouseEnter?: (value: any) => void;
+  onMouseLeave?: (value: any) => void;
   className?: string;
 }>;
 
 export default function TooltipTrigger(props: TooltipTriggerProps) {
   const {
+    groupId,
     children,
     offsetOverride,
     contentOverride,
@@ -33,14 +36,18 @@ export default function TooltipTrigger(props: TooltipTriggerProps) {
     delayShowOverride,
     delayHideOverride,
     shouldFollowMouse,
+    variantOverride,
     hide,
     className,
-    uniqueId,
+    onClick,
+    onMouseEnter,
+    onMouseLeave,
   } = props;
 
   const tooltipDataProps = useMemo(() => {
     const dataProps: any = {};
 
+    if (groupId) dataProps['data-tooltip-id'] = groupId;
     if (offsetOverride) dataProps['data-tooltip-offset'] = offsetOverride;
     if (contentOverride) dataProps['data-tooltip-content'] = contentOverride;
     if (placeOverride) dataProps['data-tooltip-place'] = placeOverride;
@@ -48,15 +55,31 @@ export default function TooltipTrigger(props: TooltipTriggerProps) {
     if (delayShowOverride) dataProps['data-tooltip-delay-show'] = delayShowOverride;
     if (delayHideOverride) dataProps['data-tooltip-delay-hide'] = delayHideOverride;
     if (hide) dataProps['data-tooltip-hidden'] = hide;
+    if (variantOverride) dataProps['data-tooltip-variant'] = variantOverride;
 
-    // dataProps['data-tooltip-variant'] = 'info'; // <--- defaults to 'dark'. Options are: dark | light | success | warning | error | info
     // dataProps['data-tooltip-class-name'] = 'custom-classname';
 
     return dataProps;
-  }, [offsetOverride, contentOverride, placeOverride, delayShowOverride, delayHideOverride, shouldFollowMouse, hide]);
+  }, [
+    groupId,
+    offsetOverride,
+    contentOverride,
+    placeOverride,
+    delayShowOverride,
+    delayHideOverride,
+    variantOverride,
+    shouldFollowMouse,
+    hide,
+  ]);
 
   return (
-    <a {...tooltipDataProps} className={clsx(uniqueId ?? tooltipClassName, className)}>
+    <a
+      {...tooltipDataProps}
+      onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      className={className}
+    >
       {children}
     </a>
   );
