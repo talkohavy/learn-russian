@@ -49,6 +49,9 @@ type TooltipProps = PropsWithChildren<{
   noArrow?: boolean;
   variant?: Variant;
   render?: (render: { content: string | null; activeAnchor: HTMLElement | null }) => ChildrenType;
+  arrowColor?: string;
+  borderRadius?: number;
+  border?: string;
   className?: string;
 }>;
 
@@ -68,6 +71,9 @@ export default function Tooltip(props: TooltipProps) {
     children,
     render,
     variant,
+    arrowColor,
+    borderRadius = 6,
+    border,
     className,
   } = props;
 
@@ -87,16 +93,17 @@ export default function Tooltip(props: TooltipProps) {
         noArrow={noArrow}
         render={render}
         variant={variant}
+        arrowColor={arrowColor}
+        border={border}
         className={className}
         // anchorSelect={`.${tooltipClassName}`}
         // content='placeholder...' // <--- DO NOT USE THIS! It takes precedence over `children`.
         // setIsOpen={setIsOpen}
         // afterShow={() => {}}
         // afterHide={() => {}}
-        // border='1px solid red'
         // opacity={0.9} // <--- defaults to 0.9
-        // arrowColor='blue'
         // positionStrategy='fixed' // <--- defaults to 'absolute'. Set to 'fixed' if you run into issues with overflow: hidden on the tooltip parent container.
+        style={{ padding: 0, borderRadius }}
       >
         {children ?? 'Empty tooltip...'}
       </TooltipOriginal>

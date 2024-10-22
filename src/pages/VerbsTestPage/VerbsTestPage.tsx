@@ -1,9 +1,11 @@
-import { useMemo, useState } from 'react';
+import { useId, useMemo, useState } from 'react';
 import Button from '@src/components/Button';
 import Input from '@src/components/Input';
 import Retry from '@src/components/svgs/Retry';
 import VInCircle from '@src/components/svgs/VInCircle';
 import XMark from '@src/components/svgs/XMark';
+import Tooltip from '@src/components/Tooltip';
+import TooltipTrigger from '@src/components/TooltipTrigger';
 import { allVerbs } from '@src/utils/constants/wordBank/allVerbs';
 import { SelectionStrategies, selectKWords } from '@src/utils/selectKWords';
 
@@ -11,6 +13,7 @@ const wordsInTestCount = 10;
 const emptyAnswers = Array.from(Array(wordsInTestCount)).map(() => '');
 
 export default function VerbsTestPage() {
+  const groupId = useId();
   const [shuffleValue, setShuffleValue] = useState<number>(0);
   const [showResults, setShowResults] = useState<boolean>();
 
@@ -54,21 +57,38 @@ export default function VerbsTestPage() {
                   className='!w-52'
                 />
 
-                <div className='h-full w-12'>
-                  {showResults && (
-                    <div className='flex h-full items-center justify-center'>
-                      {isCorrectAnswer ? (
-                        <VInCircle className='h-1/2' borderColor='#19d23a' color='#19d23a' title={spelling} />
-                      ) : (
-                        <XMark className='h-1/2 stroke-red-500' title={spelling} />
-                      )}
-                    </div>
-                  )}
+                <div className='h-full w-6'>
+                  <TooltipTrigger groupId={groupId} contentOverride={spelling}>
+                    {showResults && (
+                      <div className='flex h-full items-center justify-center'>
+                        {isCorrectAnswer ? (
+                          <VInCircle className='h-1/2' borderColor='#19d23a' color='#19d23a' />
+                        ) : (
+                          <XMark className='h-1/2 stroke-red-500' />
+                        )}
+                      </div>
+                    )}
+                  </TooltipTrigger>
                 </div>
               </div>
             </div>
           );
         })}
+
+        <Tooltip
+          groupId={groupId}
+          isClickable
+          render={({ content }) => (
+            <div className='min-w-32'>
+              <div className='flex h-6 items-center rounded-t-lg bg-neutral-900 p-2'>Answer</div>
+              <div className='rounded-b-lg bg-white p-4 text-black'>{content}</div>
+            </div>
+          )}
+          borderRadius={9}
+          border='1px solid #999'
+          arrowColor='white'
+          className='shadow-dark-xs'
+        />
       </div>
 
       <div className='flex w-full max-w-md items-center justify-between gap-4'>

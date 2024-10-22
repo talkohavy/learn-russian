@@ -133,23 +133,21 @@ export default function TestPage() {
                 />
 
                 <div className='h-full w-6'>
-                  {showResults && (
-                    <TooltipTrigger
-                      groupId={tooltipUniqueId}
-                      contentOverride={spelling}
-                      className='flex h-full items-center justify-center'
-                    >
-                      {isCorrectAnswer ? (
-                        <VInCircle className='h-1/2' borderColor='#19d23a' color='#19d23a' />
-                      ) : (
-                        <XMark className='h-1/2 stroke-red-500' />
-                      )}
-                    </TooltipTrigger>
-                  )}
+                  <TooltipTrigger groupId={tooltipUniqueId} contentOverride={spelling}>
+                    {showResults && (
+                      <div className='flex h-full items-center justify-center'>
+                        {isCorrectAnswer ? (
+                          <VInCircle className='h-1/2' borderColor='#19d23a' color='#19d23a' />
+                        ) : (
+                          <XMark className='h-1/2 stroke-red-500' />
+                        )}
+                      </div>
+                    )}
+                  </TooltipTrigger>
                 </div>
               </div>
 
-              <Tooltip groupId={tooltipUniqueId} place={Placement.Top} isClickable />
+              <Tooltip groupId={tooltipUniqueId} place={Placement.Top} isClickable className='!p-3' />
             </div>
           );
         })}
