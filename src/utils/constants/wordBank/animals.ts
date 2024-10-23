@@ -97,4 +97,20 @@ export const animals: Array<Word> = [
     categories: [Category.Animals],
     singularForeignKey: 'медведь',
   },
+  {
+    spelling: 'кит',
+    soundsLike: 'KIT',
+    meaning: ['whale'],
+    points: 0,
+    categories: [Category.Animals],
+    pluralForeignKey: 'киты',
+  },
+  {
+    spelling: 'киты',
+    soundsLike: 'KIT',
+    meaning: ['whales'],
+    points: 0,
+    categories: [Category.Animals],
+    singularForeignKey: 'кит',
+  },
 ];

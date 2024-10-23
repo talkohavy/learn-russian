@@ -19,7 +19,7 @@ function Client() {
 
           await indexDBClient.init();
 
-          // await indexDBClient.populateIfNewWords();
+          await indexDBClient.populateIfNewWords();
         }}
       >
         <BrowserRouter>
