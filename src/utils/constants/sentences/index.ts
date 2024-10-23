@@ -85,7 +85,7 @@ export const sentences: Array<Word> = [
     categories: [Category.Sentences],
   },
   {
-    spelling: 'ты уже дома?',
+    spelling: 'ты уже дома',
     meaning: ['are you at home already?'],
     points: 0,
     categories: [Category.Sentences],
