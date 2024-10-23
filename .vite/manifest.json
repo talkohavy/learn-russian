@@ -1,34 +1,41 @@
 {
-  "_DisappearingMessage.D9f2EmXK.js": {
-    "file": "static/js/DisappearingMessage.D9f2EmXK.js",
+  "_DisappearingMessage.Ca48Bh-u.js": {
+    "file": "static/js/DisappearingMessage.Ca48Bh-u.js",
     "name": "DisappearingMessage",
     "imports": [
       "index.html"
     ]
   },
-  "_Input.DGPVMeRE.js": {
-    "file": "static/js/Input.DGPVMeRE.js",
+  "_Input.BPxK_vWq.js": {
+    "file": "static/js/Input.BPxK_vWq.js",
     "name": "Input",
     "imports": [
       "index.html"
     ]
   },
-  "_Select.HEGhKSLD.js": {
-    "file": "static/js/Select.HEGhKSLD.js",
+  "_Select.DEclF5R4.js": {
+    "file": "static/js/Select.DEclF5R4.js",
     "name": "Select",
     "imports": [
       "index.html"
     ]
   },
-  "_selectKWords.B88nwRo8.js": {
-    "file": "static/js/selectKWords.B88nwRo8.js",
+  "_selectKWords.!~{00e}~.js": {
+    "file": "static/css/selectKWords.Cp4QZ0Kh_IHx.css",
+    "src": "_selectKWords.!~{00e}~.js"
+  },
+  "_selectKWords.BIqsXwV6.js": {
+    "file": "static/js/selectKWords.BIqsXwV6.js",
     "name": "selectKWords",
     "imports": [
       "index.html"
+    ],
+    "css": [
+      "static/css/selectKWords.Cp4QZ0Kh_IHx.css"
     ]
   },
   "index.html": {
-    "file": "main/index-BRNH0Gtr.js",
+    "file": "main/index-DopyNR0x.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
@@ -36,39 +43,40 @@
       "pages/Home/index.tsx",
       "pages/Test/index.ts",
       "pages/VerbsTestPage/index.ts",
+      "pages/SentencesTestPage/index.ts",
       "pages/AddWordPage/index.ts",
       "pages/EditWordPage/index.ts",
       "pages/RedirectToHome/index.ts"
     ],
     "css": [
-      "static/css/index.CUPsPE6o_ETC.css"
+      "static/css/index.Bz7UZsyHlM3H.css"
     ]
   },
   "pages/AddWordPage/index.ts": {
-    "file": "static/js/index.D6QRMuS2.js",
+    "file": "static/js/index.BwXAkYDp.js",
     "name": "index",
     "src": "pages/AddWordPage/index.ts",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_Input.DGPVMeRE.js",
-      "_DisappearingMessage.D9f2EmXK.js"
+      "_Input.BPxK_vWq.js",
+      "_DisappearingMessage.Ca48Bh-u.js"
     ]
   },
   "pages/EditWordPage/index.ts": {
-    "file": "static/js/index.D3yj9rVb.js",
+    "file": "static/js/index.CUvhIoO1.js",
     "name": "index",
     "src": "pages/EditWordPage/index.ts",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_Input.DGPVMeRE.js",
-      "_DisappearingMessage.D9f2EmXK.js",
-      "_Select.HEGhKSLD.js"
+      "_Input.BPxK_vWq.js",
+      "_DisappearingMessage.Ca48Bh-u.js",
+      "_Select.DEclF5R4.js"
     ]
   },
   "pages/Home/index.tsx": {
-    "file": "static/js/index.BXMNPhx3.js",
+    "file": "static/js/index.CSYqsqb6.js",
     "name": "index",
     "src": "pages/Home/index.tsx",
     "isDynamicEntry": true,
@@ -77,7 +85,7 @@
     ]
   },
   "pages/RedirectToHome/index.ts": {
-    "file": "static/js/index.QxSCpLUz.js",
+    "file": "static/js/index.rmAC3-JK.js",
     "name": "index",
     "src": "pages/RedirectToHome/index.ts",
     "isDynamicEntry": true,
@@ -85,27 +93,38 @@
       "index.html"
     ]
   },
+  "pages/SentencesTestPage/index.ts": {
+    "file": "static/js/index.Bqbhko5e.js",
+    "name": "index",
+    "src": "pages/SentencesTestPage/index.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html",
+      "_Input.BPxK_vWq.js",
+      "_selectKWords.BIqsXwV6.js"
+    ]
+  },
   "pages/Test/index.ts": {
-    "file": "static/js/index.CvOLKyqz.js",
+    "file": "static/js/index.DTt199qE.js",
     "name": "index",
     "src": "pages/Test/index.ts",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_Input.DGPVMeRE.js",
-      "_Select.HEGhKSLD.js",
-      "_selectKWords.B88nwRo8.js"
+      "_Input.BPxK_vWq.js",
+      "_Select.DEclF5R4.js",
+      "_selectKWords.BIqsXwV6.js"
     ]
   },
   "pages/VerbsTestPage/index.ts": {
-    "file": "static/js/index.CByUib_F.js",
+    "file": "static/js/index.qbPo8bWF.js",
     "name": "index",
     "src": "pages/VerbsTestPage/index.ts",
     "isDynamicEntry": true,
     "imports": [
       "index.html",
-      "_Input.DGPVMeRE.js",
-      "_selectKWords.B88nwRo8.js"
+      "_Input.BPxK_vWq.js",
+      "_selectKWords.BIqsXwV6.js"
     ]
   }
 }
