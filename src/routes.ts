@@ -5,6 +5,7 @@ import type { Route } from './utils/types';
 const HomePage = lazy(() => import('./pages/Home'));
 const TestPage = lazy(() => import('./pages/Test'));
 const VerbsTestPage = lazy(() => import('./pages/VerbsTestPage'));
+const SentencesTestPage = lazy(() => import('./pages/SentencesTestPage'));
 const AddNewWordPage = lazy(() => import('./pages/AddWordPage'));
 const EditNewWordPage = lazy(() => import('./pages/EditWordPage'));
 const RedirectToHome = lazy(() => import('./pages/RedirectToHome'));
@@ -32,6 +33,12 @@ export const routes: Array<Route> = [
     text: 'Verbs',
     activeNames: ['/verbs'],
     Component: VerbsTestPage,
+  },
+  {
+    to: `${BASE_URL}/sentences`,
+    text: 'Sentences',
+    activeNames: ['/sentences'],
+    Component: SentencesTestPage,
   },
   {
     to: `${BASE_URL}/add-word`,

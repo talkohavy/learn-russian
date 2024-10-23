@@ -1,12 +1,4 @@
-import { Category } from '@src/utils/types';
-
-export type Sentence = {
-  id?: number;
-  spelling: string;
-  meaning: string;
-  points: number;
-  categories: Array<Category>;
-};
+import { Category, Word } from '@src/utils/types';
 
 // • where is the toilet/bathroom? - где туалет?
 // • you are not my father - ты не мой папа
@@ -55,88 +47,88 @@ export type Sentence = {
 // .--- a at the end ---
 // • we are in the cafe - мы в кафе
 
-export const sentences: Array<Sentence> = [
+export const sentences: Array<Word> = [
   {
     spelling: 'мой брат живёт в Москве',
-    meaning: 'my brother lives in Moscow',
+    meaning: ['my brother lives in Moscow'],
     points: 0,
     categories: [Category.Sentences],
   },
   {
-    spelling: 'кто здесь живёт?',
-    meaning: 'who lives here?',
+    spelling: 'кто здесь живёт',
+    meaning: ['who lives here?'],
     points: 0,
     categories: [Category.Sentences],
   },
   {
-    spelling: 'марк сейчас в россии',
-    meaning: 'Mark is in Russia now',
+    spelling: 'марк в россии сейчас',
+    meaning: ['Mark is in Russia now'],
     points: 0,
     categories: [Category.Sentences],
   },
   {
-    spelling: 'я сейчас не в москве',
-    meaning: 'I am not in Moscow now',
+    spelling: 'я не в москве сейчас',
+    meaning: ['I am not in Moscow now'],
     points: 0,
     categories: [Category.Sentences],
   },
   {
-    spelling: 'мы сейчас в америке',
-    meaning: 'we are in America now',
+    spelling: 'мы в америке сейчас',
+    meaning: ['we are in America now'],
     points: 0,
     categories: [Category.Sentences],
   },
   {
-    spelling: 'я сейчас на работе',
-    meaning: 'I am at work now',
+    spelling: 'я на работе сейчас',
+    meaning: ['I am at work now'],
     points: 0,
     categories: [Category.Sentences],
   },
   {
-    spelling: 'ты уже в дома?',
-    meaning: 'are you at home already?',
+    spelling: 'ты уже дома?',
+    meaning: ['are you at home already?'],
     points: 0,
     categories: [Category.Sentences],
   },
   {
     spelling: 'берлин город в германии',
-    meaning: 'Berlin is a city in Germany',
+    meaning: ['Berlin is a city in Germany'],
     points: 0,
     categories: [Category.Sentences],
   },
   {
     spelling: 'катя не живёт в городе',
-    meaning: 'katia does not live in the city',
+    meaning: ['katia does not live in the city'],
     points: 0,
     categories: [Category.Sentences],
   },
   {
     spelling: 'тарелка на месте',
-    meaning: 'the plate is in its place',
+    meaning: ['the plate is in its place'],
     points: 0,
     categories: [Category.Sentences],
   },
   {
     spelling: 'мои брат и сестра в школе',
-    meaning: 'my brother and sister are at school',
+    meaning: ['my brother and sister are at school'],
     points: 0,
     categories: [Category.Sentences],
   },
   {
     spelling: 'эта кровать не на месте',
-    meaning: 'this bed is not in its place',
+    meaning: ['this bed is not in its place'],
     points: 0,
     categories: [Category.Sentences],
   },
   {
     spelling: 'Я хочу знать',
-    meaning: 'i want to know',
+    meaning: ['i want to know'],
     points: 0,
     categories: [Category.Sentences],
   },
   {
     spelling: 'я знал это',
-    meaning: 'I knew that',
+    meaning: ['I knew that'],
     points: 0,
     categories: [Category.Sentences],
   },

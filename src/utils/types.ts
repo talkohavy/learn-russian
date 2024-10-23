@@ -34,7 +34,7 @@ export type Word = {
   id?: number;
   spelling: string;
   meaning: Array<string>;
-  soundsLike: string;
+  soundsLike?: string;
   singularForeignKey?: string | null;
   pluralForeignKey?: string;
   maleForeignKey?: string;
