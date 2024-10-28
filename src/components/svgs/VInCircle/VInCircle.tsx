@@ -7,7 +7,7 @@ type VInCircleProps = {
 };
 
 export default function VInCircle(props: VInCircleProps) {
-  const { color = 'black', fillColor = 'none', borderColor, title = 'v in a circle', className } = props;
+  const { color = 'black', fillColor = 'none', borderColor, title, className } = props;
 
   return (
     <svg
