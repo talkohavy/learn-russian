@@ -23,7 +23,7 @@ export const greetings: Array<Word> = [
     categories: [Category.Greetings],
   },
   {
-    spelling: 'доброе утра',
+    spelling: 'доброе утро',
     soundsLike: 'DOBREY UTRA',
     meaning: ['good morning'],
     points: 0,
